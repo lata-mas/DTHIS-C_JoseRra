@@ -1,4 +1,4 @@
-# TemplateSADs
+# README
 Repositorio TEMPLATE para los otros dispositivos del IER. 
 **Antes de usar esta plantilla se recomienda ver el video, si ya está familiarizado 
 con Github y los repositorios en general, puede omitir esta información,**.
