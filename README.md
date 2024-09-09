@@ -31,14 +31,11 @@ con Github y los repositorios en general, puede omitir esta información,**.
 
 
 # Dispositivo 
-**(nombre de su dispositivo)**
+**DTHIS-C**
 # 1.0 Introducción 
-**(adaptar esta introducción a su dispositivo)**
 
-El futuro de la humanidad y del planeta dependen de la manera en la que produzcamos energía: un sistema energético fiable, asequible y descarbonizado es fundamental.
-Las energías renovables son fuentes de energía limpias, inagotables y crecientemente competitivas. Se diferencian de los combustibles fósiles principalmente en su diversidad, abundancia y potencial de aprovechamiento en cualquier parte del planeta, pero sobre todo en que no producen gases de efecto invernadero, causantes del cambio climático, ni emisiones contaminantes. Además, sus costes evolucionan a la baja de forma sostenida, mientras que la tendencia general de costes de los combustibles fósiles es la opuesta.
-El crecimiento de las energías renovables es imparable, como queda reflejado en las estadísticas aportadas anualmente por la Agencia Internacional de la Energía (AIE): según las previsiones de la AIE, la participación de las renovables en el suministro eléctrico global pasará del 26% en 2018 al 44% en 2040, y proporcionarán 2/3 del incremento de demanda eléctrica registrado en este período, principalmente a través de las tecnologías eólica y fotovoltaica.
-De acuerdo a la AIE, la demanda mundial de electricidad aumentará un 70% hasta 2040, elevando su participación en el uso de energía final del 18% al 24% en el mismo período, espoleada principalmente por regiones emergentes (India, China, África, Oriente Medio y el Sureste asiático).
+El dispositivo de campaña está pensado para ser portátil, adquirir datos sin requerir de una red WiFi y debe medir las siguientes variables y especificaciones:
+El dispositivo THIS es un monitor de variables enfocado a los espacios de trabajo, por sus siglas (Temperatura, Humedad relativa, Iluminación y Sonido) monitorea dichas variables a fin de evaluar las condiciones de confort térmico, lumínico y acústico en interiores. Utiliza como microcontrolador una Raspberry Pi 3
 Con lo anterior y compartiendo la idea de utilizar mas las energías limpias, se implementan nuevas formas de controlar los diferentes recursos que se utilizan en el día a día en el Instituto de Energías Renovables-UNAM, se implementarán dispositivos que puedan medir la cantidad de recursos que se consumen como lo son: el agua, la energía eléctrica, humedad, intensidad luminosa y temperatura de un edificio del instituto, con la intención de poder medir cada variable y posteriormente observar cuanto se consume para tratar de reducirlos en gran medida, lo anterior se lleva a cabo con dispositivos electrónicos que están integrados principalmente con sensores y haciendo uso de tecnologías abiertas para los códigos y envío de datos a la plataforma Thingsboard para la visualización de gráficos.
 
 ### 1.1 Sobre los autores
