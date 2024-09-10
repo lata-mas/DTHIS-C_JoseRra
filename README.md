@@ -1,37 +1,5 @@
 # DTHIS-C
-Repositorio TEMPLATE para los otros dispositivos del IER. 
-**Antes de usar esta plantilla se recomienda ver el video, si ya está familiarizado 
-con Github y los repositorios en general, puede omitir esta información,**.
 
-[**Video**](https://youtu.be/eMYjKd1Cey0)
-
-##### Mientras trabaja con esta plantilla para crear un repositorio o mientras la use, puede seguir la lista de abajo para que vaya llevando un orden de lo que ha hecho y lo que aún le queda por hacer.
-
-**En cuanto a la documentación, puede ser de ayuda para ver los archivos contenidos en este repositorio**
-
-[**REPO DE EJEMPLO**](https://github.com/jwilliamsee/SensorH2OResidencia)
-
-#  las casillas casillas no se pueden marcar, sólo es para visualización, para saber lo que debe tener la documentación de su dispositivo
-- [ ] Lista de costos
-- [ ] SRC completos
-- [ ] Pictogramas
-- [ ] Esquemático
-- [ ] Diseño PCB
-- [ ] Gerber PCB
-- [ ] Lista materiales
-- [ ] Planos CAD
-- [ ] CAD
-- [ ] STL
-- [ ] Manual Operación
-- [ ] Manual Ensamble
-- [ ] Fichas Técnicas
-- [ ] Doc. Errores y soluciones
-
-**Cuando su repositorio se encuentre terminado, puede borrar esta parte y hacer una Check-List basado en lo de arriba, la intención es que sólo quede la información a partir que se termina este párrafo**
-
-
-# Dispositivo 
-**DTHIS-C**
 # 1.0 Introducción 
 
 El dispositivo de campaña está pensado para ser portátil, adquirir datos sin requerir de una red WiFi y debe medir las siguientes variables y especificaciones:
