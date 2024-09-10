@@ -22,15 +22,17 @@ El DTHIS-C mide las siguientes variables:
 
 ### 1.1 Composición del DTHIS-C
 
-| Sensor                                        |    Variable      | Cantidad  |  Comunicación |    Microcontrolador   |
-|-----------------------------------------------|------------------|-----------|---------------|-----------------------|
-|  Termopar tipo T                              |   To             |     1     |      ICSP     |  Arduino UNO R4 WiFi  |
-|  TPF1/E-PT1000                                |   Tr             |     1     |      ICSP     |  Arduino UNO R4 WiFi  |
-|  Wind Sensor Rev P                            |  WS y Dirección  |     1     |      ADC      |  Arduino UNO R4 WiFi  |
-|  SCD30 sensirion                              |  CO2 y HR        |     1     |      I2C      |    Raspberry Pi 4     |
-|  5MP OV5647 Wide Angle Fisheye Camera         |  Luminancia      |     1     |      SCI      |    Raspberry Pi 4     |
-|  Microfono ambiental USB                      |  Sonido          |     1     |      USB      |    Raspberry Pi 4     |
+| **Sensor**                                    | **Variable**     | **Cantidad** | **Comunicación** | **Microcontrolador**    |
+|-----------------------------------------------|------------------|--------------|------------------|-------------------------|
+| Termopar tipo T                               | To               | 4            | ICSP             | Arduino UNO R4 WiFi      |
+| TPF1/E-PT1000                                 | Tr               | 1            | ICSP             | Arduino UNO R4 WiFi      |
+| Wind Sensor Rev P                             | WS y Dirección   | 1            | ADC              | Arduino UNO R4 WiFi      |
+| SCD30 Sensirion                               | CO₂ y HR         | 1            | I2C              | Raspberry Pi 4           |
+| 5MP OV5647 Wide Angle Fisheye Camera          | Luminancia       | 1            | SCI              | Raspberry Pi 4           |
+| Micrófono ambiental USB                       | Sonido           | 1            | USB              | Raspberry Pi 4           |
 
+
+### 1.2 Participantes del proyecto
 
 |Nombre|Instituto/Organización|Email|
 | ------------ | ------------ | ------------ |
