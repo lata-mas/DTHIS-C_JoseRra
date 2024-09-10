@@ -2,9 +2,23 @@
 
 # 1.0 Introducción 
 
-El dispositivo de campaña está pensado para ser portátil, adquirir datos sin requerir de una red WiFi y debe medir las siguientes variables y especificaciones:
-El dispositivo THIS es un monitor de variables enfocado a los espacios de trabajo, por sus siglas (Temperatura, Humedad relativa, Iluminación y Sonido) monitorea dichas variables a fin de evaluar las condiciones de confort térmico, lumínico y acústico en interiores. Utiliza como microcontrolador una Raspberry Pi 3
-Con lo anterior y compartiendo la idea de utilizar mas las energías limpias, se implementan nuevas formas de controlar los diferentes recursos que se utilizan en el día a día en el Instituto de Energías Renovables-UNAM, se implementarán dispositivos que puedan medir la cantidad de recursos que se consumen como lo son: el agua, la energía eléctrica, humedad, intensidad luminosa y temperatura de un edificio del instituto, con la intención de poder medir cada variable y posteriormente observar cuanto se consume para tratar de reducirlos en gran medida, lo anterior se lleva a cabo con dispositivos electrónicos que están integrados principalmente con sensores y haciendo uso de tecnologías abiertas para los códigos y envío de datos a la plataforma Thingsboard para la visualización de gráficos.
+El dispositivo **DTHIS-C** (Dispositivo para la medición de Temperatura, Humedad, Iluminación y Sonido en Campaña) está diseñado para evaluar las condiciones ambientales en interiores y exteriores, permitiendo la medición precisa de una amplia gama de variables. Este equipo portátil no requiere conexión a una red WiFi para la adquisición de datos, lo que lo hace ideal para campañas en sitios remotos o situaciones donde la movilidad es fundamental.
+
+El DTHIS-C mide las siguientes variables:
+
+- **Temperatura del aire** a distintas alturas:
+  1. 0.1 m
+  2. 0.6 m
+  3. 1.1 m
+  4. 1.7 m
+- **Temperatura radiante**
+- **Humedad relativa**
+- **Velocidad y dirección del viento**
+- **Niveles de CO2**
+- **Mapas de luminancia** para evaluar la iluminación
+- **Deslumbramiento**
+- **Sonido**
+
 
 ### 1.1 Sobre los autores
 **(adaptar según los autores que participan)**
