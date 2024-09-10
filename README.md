@@ -20,8 +20,17 @@ El DTHIS-C mide las siguientes variables:
 - **Sonido**
 
 
-### 1.1 Sobre los autores
-**(adaptar según los autores que participan)**
+### 1.1 Composición del DTHIS-C
+
+| Sensor                                        |    Variable      | Cantidad  |  Comunicación |    Microcontrolador   |
+|-----------------------------------------------|------------------|-----------|---------------|-----------------------|
+|  Termopar tipo T                              |   To             |     1     |      ICSP     |  Arduino UNO R4 WiFi  |
+|  TPF1/E-PT1000                                |   Tr             |     1     |      ICSP     |  Arduino UNO R4 WiFi  |
+|  SCD30 sensirion                              |  CO2 y HR        |     1     |      I2C      ||    Raspberry Pi 4    |
+|  Wind Sensor Rev P                            |  WS y Dirección  |     1     |      ADC      |  Arduino UNO R4 WiFi  |
+|  5MP OV5647 Wide Angle Fisheye Camera         |  Luminancia      |     1     |   Cámara Pi   |    Raspberry Pi 4     |
+|  Microfono ambiental USB                      |  Sonido          |     1     |      USB      |    Raspberry Pi 4     |
+
 
 |Nombre|Instituto/Organización|Email|
 | ------------ | ------------ | ------------ |
