@@ -2,7 +2,7 @@
 
 # 1.0 Introducción 
 
-El dispositivo **DTHIS-C** (Dispositivo para la medición de Temperatura, Humedad, Iluminación y Sonido en Campaña) está diseñado para evaluar las condiciones ambientales en interiores y exteriores, permitiendo la medición precisa de una amplia gama de variables. Este equipo portátil no requiere conexión a una red WiFi para la adquisición de datos, lo que lo hace ideal para campañas en sitios remotos o situaciones donde la movilidad es fundamental.
+El dispositivo **DTHIS-C** (Dispositivo de Temperatura, Humedad, Iluminación y Sonido en Campaña) está diseñado para evaluar las condiciones ambientales en interiores y exteriores, permitiendo la medición precisa de una amplia gama de variables. Este equipo portátil no requiere conexión a una red WiFi para la adquisición de datos, lo que lo hace ideal para campañas en sitios remotos o situaciones donde la movilidad es fundamental.
 
 El DTHIS-C mide las siguientes variables:
 
