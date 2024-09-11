@@ -33,20 +33,19 @@ El DTHIS-C mide las siguientes variables:
 
 
 > [!Tip]
-> Este repositorio está diseñado para simplificar el desarrollo y uso del dispositivo **DTHIS-C**. Sus principales componentes son:
+> Este repositorio está diseñado para simplificar el desarrollo y uso del dispositivo **DTHIS-C**. Dentro de este repositorio usted podrá encontrar:
 >
-> - **Scripts para sensores**: Cada sensor del DTHIS-C tiene su propio directorio, que incluye:
+> - **Uso de sensores**: Cada sensor del DTHIS-C tiene su propio directorio, que incluye:
 >   - Recomendaciones para la correcta implementación.
 >   - Esquemas de conexión detallados.
 >   - Código funcional específico para cada sensor.
 >
-> - **Script principal para ThingsBoard**: Un script central integra las mediciones de todos los sensores y las envía a **ThingsBoard** vía **MQTT**, permitiendo la monitorización en tiempo real desde cualquier ubicación con acceso a la plataforma.
+> - **ThingsBoard**: Un script central integra las mediciones de todos los sensores y las envía a **ThingsBoard** vía **MQTT**, permitiendo la monitorización en tiempo real desde cualquier ubicación con acceso a la plataforma.
 >
 > - **Manual de uso y ensamblaje**: Una guía completa que cubre:
 >   - Esquemas de conexión y diagramas eléctricos.
 >   - Instrucciones paso a paso para ensamblar el DTHIS-C.
->   - Consejos para el montaje y calibración de los sensores en campo.
->
+>   >
 > Este repositorio es útil tanto para trabajar con sensores individuales como para la construcción integral del dispositivo.
 
 
