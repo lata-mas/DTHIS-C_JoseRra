@@ -25,14 +25,14 @@ El dispositivo está equipado para medir una amplia gama de variables, tales com
 
 El dispositivo se compone de los siguientes sensores y componentes electrónicos:
 
-| **Sensor**                                    | **Variable**     | **Cantidad** | **Comunicación** | **Microcontrolador**    |
-|-----------------------------------------------|------------------|--------------|------------------|-------------------------|
-| Termopar tipo T                               | To               | 4            | ICSP             | Arduino UNO R4 WiFi      |
-| TPF1/E-PT1000                                 | Tr               | 1            | ICSP             | Arduino UNO R4 WiFi      |
-| Wind Sensor Rev P                             | WS y Dirección   | 1            | ADC              | Arduino UNO R4 WiFi      |
-| SCD30 Sensirion                               | CO₂ y HR         | 1            | I2C              | Raspberry Pi 4           |
-| 5MP OV5647 Wide Angle Fisheye Camera          | Luminancia       | 1            | SCI              | Raspberry Pi 4           |
-| Micrófono ambiental USB                       | Sonido           | 1            | USB              | Raspberry Pi 4           |
+| **Sensor**                                    | **Variable**                       | **Cantidad** | **Comunicación** | **Microcontrolador**     |
+|-----------------------------------------------|------------------------------------|--------------|------------------|--------------------------|
+| Termopar tipo T                               | Temperatura Ambiente               | 4            | ICSP             | Arduino UNO R4 WiFi      |
+| TPF1/E-PT1000                                 | Temperatura Radiante               | 1            | ICSP             | Arduino UNO R4 WiFi      |
+| Wind Sensor Rev P                             | Velocidad y Dirección del viento   | 1            | ADC              | Arduino UNO R4 WiFi      |
+| SCD30 Sensirion                               | CO₂ y HR                           | 1            | I2C              | Raspberry Pi 4           |
+| 5MP OV5647 Wide Angle Fisheye Camera          | Luminancia                         | 1            | SCI              | Raspberry Pi 4           |
+| Micrófono ambiental USB                       | Sonido                             | 1            | USB              | Raspberry Pi 4           |
 
 ---
 
@@ -40,8 +40,8 @@ El dispositivo se compone de los siguientes sensores y componentes electrónicos
 
 El equipo responsable del desarrollo y construcción del DTHIS-C está conformado por los siguientes integrantes:
 
-| **Nombre**                  | **Instituto/Organización** | **Email**             |
-|-----------------------------|----------------------------|-----------------------|
+| **Nombre**                   | **Instituto/Organización** | **Email**             |
+|------------------------------|----------------------------|-----------------------|
 | Guillermo Barrios del Valle  | IER-UNAM                   | gbv@ier.unam.mx       |
 | Guillermo Ramírez Zúñiga     | IER-UNAM                   | guraz@ier.unam.mx     |
 | Jorge Luis Méndez Reyna      | IER-UNAM                   | merejo@ier.unam.mx    |
@@ -57,17 +57,16 @@ El equipo responsable del desarrollo y construcción del DTHIS-C está conformad
 > 
 > ### 1. Uso de sensores
 > Cada sensor integrado en el DTHIS-C tiene su propio directorio en el repositorio, dentro de los cuales encontrarás:
-> - **Consejos prácticos** para una correcta implementación.
-> - **Esquemas de conexión** detallados que facilitan el montaje.
+> - **Indicaciones** para una correcta implementación.
 > - **Código funcional** específico para cada sensor.
 >
 > ### 2. Integración con ThingsBoard
-> El repositorio incluye un **script central** que recopila las mediciones de todos los sensores y las envía a la plataforma **ThingsBoard** mediante el protocolo **MQTT**. Esto permite la monitorización en tiempo real de las variables, accesible desde cualquier lugar con conexión a la plataforma.
+> El repositorio incluye un archivo **main** que recopila las mediciones de todos los sensores y las envía a la plataforma **ThingsBoard** mediante el protocolo **MQTT**. Esto permite la monitorización en tiempo real de las variables.
 >
 > ### 3. Manual de uso y ensamblaje
 > Además, el repositorio ofrece un manual detallado que cubre:
 > - **Esquemas de conexión** y **diagramas eléctricos**.
-> - **Instrucciones paso a paso** para el ensamblaje del DTHIS-C, lo que facilita su construcción desde cero.
+> - **Instrucciones paso a paso** para el ensamblaje del DTHIS-C.
 >
-> ---
+> 
 > Este repositorio es útil tanto para trabajar con sensores de forma individual como para la construcción completa del dispositivo DTHIS-C.
