@@ -34,11 +34,13 @@ El DTHIS-C mide las siguientes variables:
 
 |Nombre|Instituto/Organización|Email|
 | ------------ | ------------ | ------------ |
-|Autor 1| | |
-|Autor 2| | |
-|Autor 3| | |
 |Guillermo Barrios del Valle|IER-UNAM|gbv@ier.unam.mx|
 |Guillermo Ramírez Zúñiga|IER-UNAM|guraz@ier.unam.mx|
+|Jorge Luis Méndez Reyna|IER-UNAM|merejo@ier.unam.mx|
+|Julio César Landa López|IER-UNAM|jclalo@ier.unam.mx|
+|José Ramón Hernández Aguilar|IER-UNAM|jrha@ier.unam.mx|
+|Debra Paola López Domínguez||dpld@ier.unam.mx|
+|Edgar Gallardo Pérez|||
 
 
 ------------
