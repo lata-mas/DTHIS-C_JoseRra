@@ -34,7 +34,33 @@ El dispositivo se compone de los siguientes sensores y componentes electrónicos
 | 5MP OV5647 Wide Angle Fisheye Camera          | Luminancia                         | 1            | SCI              | Raspberry Pi 4           |
 | Micrófono ambiental USB                       | Sonido                             | 1            | USB              | Raspberry Pi 4           |
 
+
 ---
+
+
+## Elementos del repositorio
+-  #### En [**docs**](https://github.com/Dispositivos-Edificio-Bioclimatico/DTHIS/tree/master/docs) encontramos
+	-  Lista de materiales y costos
+	-  Manual de operación
+	-  Fichas técnicas o datasheet de los módulos, sensores y componentes usados
+	- Documento de errores, soluciones y recomendaciones
+
+-  #### En [**diagramas**](https://github.com/Dispositivos-Edificio-Bioclimatico/DTHIS/tree/master/diagrama) encontramos
+	- Pictograma de conexión
+	- Esquemático de conexión
+	
+-  #### En [**codigo**](https://github.com/Dispositivos-Edificio-Bioclimatico/DTHIS/tree/master/codigo) encontramos
+	- Códigos completos
+	- Librerías a usar.
+	- Explicación.
+-  #### En [**carcasa**](https://github.com/Dispositivos-Edificio-Bioclimatico/DTHIS/tree/master/cad) encontramos
+	-  Planos CAD
+	-  Archivos de diseño CAD
+	-  Archivos STL para impresión 3D
+
+
+---
+
 
 ## Participantes del proyecto
 
