@@ -39,24 +39,26 @@ El dispositivo se compone de los siguientes sensores y componentes electrónicos
 
 
 ## Elementos del repositorio
--  #### En [**docs**](https://github.com/Dispositivos-Edificio-Bioclimatico/DTHIS/tree/master/docs) encontramos
-	-  Lista de materiales y costos
-	-  Manual de operación
-	-  Fichas técnicas o datasheet de los módulos, sensores y componentes usados
-	- Documento de errores, soluciones y recomendaciones
-
--  #### En [**diagramas**](https://github.com/Dispositivos-Edificio-Bioclimatico/DTHIS/tree/master/diagrama) encontramos
-	- Pictograma de conexión
-	- Esquemático de conexión
-	
--  #### En [**codigo**](https://github.com/Dispositivos-Edificio-Bioclimatico/DTHIS/tree/master/codigo) encontramos
-	- Códigos completos
-	- Librerías a usar.
-	- Explicación.
--  #### En [**carcasa**](https://github.com/Dispositivos-Edificio-Bioclimatico/DTHIS/tree/master/cad) encontramos
+ 
+-  #### En [**CAD**](https://github.com/lata-mas/DTHIS-C_JoseRra/tree/main/CAD) encuentra
 	-  Planos CAD
 	-  Archivos de diseño CAD
 	-  Archivos STL para impresión 3D
+
+ - #### En [**Diagramas**](https://github.com/lata-mas/DTHIS-C_JoseRra/tree/main/Diagramas) encuentra
+	- Pictograma de conexión
+	- Esquemático de conexión
+
+ - #### En [**Manuales**](https://github.com/lata-mas/DTHIS-C_JoseRra/tree/main/Manuales) encuentra
+	-  Manual de operación
+   	-  Fichas técnicas o datasheet de los sensores y componentes utilizados
+
+ -  #### En [**Materiales**](https://github.com/lata-mas/DTHIS-C_JoseRra/tree/main/Materiales) encuentra
+	-  Lista de materiales y costos
+
+ -  #### En [**Scripts**](https://github.com/lata-mas/DTHIS-C_JoseRra/tree/main/Scripts) encuentra
+	- Códigos completos y documentados
+	- Librerías a utilizar
 
 
 ---
