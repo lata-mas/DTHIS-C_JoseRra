@@ -30,6 +30,20 @@ El DTHIS-C mide las siguientes variables:
 | Micrófono ambiental USB                       | Sonido           | 1            | USB              | Raspberry Pi 4           |
 
 
+### Participantes del proyecto
+
+|Nombre|Instituto/Organización|Email|
+| ------------ | ------------ | ------------ |
+|Autor 1| | |
+|Autor 2| | |
+|Autor 3| | |
+|Guillermo Barrios del Valle|IER-UNAM|gbv@ier.unam.mx|
+|Guillermo Ramírez Zúñiga|IER-UNAM|guraz@ier.unam.mx|
+
+
+------------
+
+
 > [!Tip]
 > Este repositorio está diseñado para simplificar el desarrollo y uso del dispositivo **DTHIS-C**. Dentro de este repositorio usted podrá encontrar:
 >
@@ -45,17 +59,3 @@ El DTHIS-C mide las siguientes variables:
 >   - Instrucciones paso a paso para ensamblar el DTHIS-C.
 >   >
 > Este repositorio es útil tanto para trabajar con sensores individuales como para la construcción integral del dispositivo.
-
-
-------------
-
-
-### 1.2 Participantes del proyecto
-
-|Nombre|Instituto/Organización|Email|
-| ------------ | ------------ | ------------ |
-|Autor 1| | |
-|Autor 2| | |
-|Autor 3| | |
-|Guillermo Barrios del Valle|IER-UNAM|gbv@ier.unam.mx|
-|Guillermo Ramírez Zúñiga|IER-UNAM|guraz@ier.unam.mx|
