@@ -1,10 +1,12 @@
 # DTHIS-C
 
-El dispositivo **DTHIS-C** (Dispositivo de Temperatura, Humedad, Iluminación y Sonido de Campaña) está diseñado para evaluar las condiciones ambientales en interiores y exteriores, permitiendo la medición precisa de una amplia gama de variables. Este equipo portátil no requiere conexión a una red WiFi para la adquisición de datos, lo que lo hace ideal para campañas en sitios remotos o situaciones donde la movilidad es fundamental.
+El **DTHIS-C** (Dispositivo de Temperatura, Humedad, Iluminación y Sonido de Campaña) está diseñado para medir y evaluar condiciones ambientales tanto en interiores como en exteriores. Su principal ventaja es su portabilidad y su capacidad para adquirir datos sin necesidad de una red WiFi, haciéndolo ideal para campañas en sitios remotos o situaciones que requieren movilidad.
 
-El DTHIS-C mide las siguientes variables:
+## Variables que mide el DTHIS-C
 
-- **Temperatura del aire** a distintas alturas:
+El dispositivo está equipado para medir una amplia gama de variables, tales como:
+
+- **Temperatura del aire** a diferentes alturas:
   1. 0.1 m
   2. 0.6 m
   3. 1.1 m
@@ -12,13 +14,16 @@ El DTHIS-C mide las siguientes variables:
 - **Temperatura radiante**
 - **Humedad relativa**
 - **Velocidad y dirección del viento**
-- **Niveles de CO2**
+- **Concentración de CO₂**
 - **Mapas de luminancia** para evaluar la iluminación
 - **Deslumbramiento**
-- **Sonido**
+- **Niveles de sonido**
 
+---
 
-### Composición del DTHIS-C
+## Composición del DTHIS-C
+
+El dispositivo se compone de los siguientes sensores y componentes electrónicos:
 
 | **Sensor**                                    | **Variable**     | **Cantidad** | **Comunicación** | **Microcontrolador**    |
 |-----------------------------------------------|------------------|--------------|------------------|-------------------------|
@@ -29,35 +34,40 @@ El DTHIS-C mide las siguientes variables:
 | 5MP OV5647 Wide Angle Fisheye Camera          | Luminancia       | 1            | SCI              | Raspberry Pi 4           |
 | Micrófono ambiental USB                       | Sonido           | 1            | USB              | Raspberry Pi 4           |
 
+---
 
-### Participantes del proyecto
+## Participantes del proyecto
 
-|Nombre|Instituto/Organización|Email|
-| ------------ | ------------ | ------------ |
-|Guillermo Barrios del Valle|IER-UNAM|gbv@ier.unam.mx|
-|Guillermo Ramírez Zúñiga|IER-UNAM|guraz@ier.unam.mx|
-|Jorge Luis Méndez Reyna|IER-UNAM|merejo@ier.unam.mx|
-|Julio César Landa López|IER-UNAM|jclalo@ier.unam.mx|
-|José Ramón Hernández Aguilar|IER-UNAM|jrha@ier.unam.mx|
-|Debra Paola López Domínguez||dpld@ier.unam.mx|
-|Edgar Gallardo Pérez|||
+El equipo responsable del desarrollo y construcción del DTHIS-C está conformado por los siguientes integrantes:
 
+| **Nombre**                  | **Instituto/Organización** | **Email**             |
+|-----------------------------|----------------------------|-----------------------|
+| Guillermo Barrios del Valle  | IER-UNAM                   | gbv@ier.unam.mx       |
+| Guillermo Ramírez Zúñiga     | IER-UNAM                   | guraz@ier.unam.mx     |
+| Jorge Luis Méndez Reyna      | IER-UNAM                   | merejo@ier.unam.mx    |
+| Julio César Landa López      | IER-UNAM                   | jclalo@ier.unam.mx    |
+| José Ramón Hernández Aguilar | IER-UNAM                   | jrha@ier.unam.mx      |
+| Debra Paola López Domínguez  |                            | dpld@ier.unam.mx      |
+| Edgar Gallardo Pérez         |                            |                       |
 
-------------
-
+---
 
 > [!Tip]
-> Este repositorio está diseñado para simplificar el desarrollo y uso del dispositivo **DTHIS-C**. Con el uso deeste repositorio usted podrá acceder a:
+> Este repositorio está diseñado para simplificar el desarrollo y uso del dispositivo **DTHIS-C**. Con su uso, podrás acceder a múltiples recursos clave para su implementación y operación eficiente:
+> 
+> ### 1. Uso de sensores
+> Cada sensor integrado en el DTHIS-C tiene su propio directorio en el repositorio, dentro de los cuales encontrarás:
+> - **Consejos prácticos** para una correcta implementación.
+> - **Esquemas de conexión** detallados que facilitan el montaje.
+> - **Código funcional** específico para cada sensor.
 >
-> - **Uso de sensores**: Cada sensor del DTHIS-C tiene su propio directorio, que incluye:
->   - Recomendaciones para la correcta implementación.
->   - Esquemas de conexión detallados.
->   - Código funcional específico para cada sensor.
+> ### 2. Integración con ThingsBoard
+> El repositorio incluye un **script central** que recopila las mediciones de todos los sensores y las envía a la plataforma **ThingsBoard** mediante el protocolo **MQTT**. Esto permite la monitorización en tiempo real de las variables, accesible desde cualquier lugar con conexión a la plataforma.
 >
-> - **ThingsBoard**: Un script central integra las mediciones de todos los sensores y las envía a **ThingsBoard** vía **MQTT**, permitiendo la monitorización en tiempo real desde cualquier ubicación con acceso a la plataforma.
+> ### 3. Manual de uso y ensamblaje
+> Además, el repositorio ofrece un manual detallado que cubre:
+> - **Esquemas de conexión** y **diagramas eléctricos**.
+> - **Instrucciones paso a paso** para el ensamblaje del DTHIS-C, lo que facilita su construcción desde cero.
 >
-> - **Manual de uso y ensamblaje**: Una guía completa que cubre:
->   - Esquemas de conexión y diagramas eléctricos.
->   - Instrucciones paso a paso para ensamblar el DTHIS-C.
->   >
-> Este repositorio es útil tanto para trabajar con sensores individuales como para la construcción integral del dispositivo.
+> ---
+> Este repositorio es útil tanto para trabajar con sensores de forma individual como para la construcción completa del dispositivo DTHIS-C.
