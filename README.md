@@ -45,7 +45,7 @@ El DTHIS-C mide las siguientes variables:
 
 
 > [!Tip]
-> Este repositorio está diseñado para simplificar el desarrollo y uso del dispositivo **DTHIS-C**. Dentro de este repositorio usted podrá encontrar:
+> Este repositorio está diseñado para simplificar el desarrollo y uso del dispositivo **DTHIS-C**. Con el uso deeste repositorio usted podrá acceder a:
 >
 > - **Uso de sensores**: Cada sensor del DTHIS-C tiene su propio directorio, que incluye:
 >   - Recomendaciones para la correcta implementación.
