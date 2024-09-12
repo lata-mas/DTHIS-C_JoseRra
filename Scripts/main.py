@@ -1,7 +1,7 @@
 import paho.mqtt.client as mqtt
 import time
 import json
-from publish_thingsboard import thingsboard_data
+from thingsboard_credentials import thingsboard_data
 from scd30 import scd30_measurements
 
 # Obtiene los datos de conexión para ThingsBoard
