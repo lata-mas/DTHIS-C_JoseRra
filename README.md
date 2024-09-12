@@ -29,8 +29,8 @@ El dispositivo se compone de los siguientes sensores y componentes electrónicos
 |-----------------------------------------------|------------------------------------|--------------|------------------|--------------------------|
 | Termopar tipo T                               | Temperatura Ambiente               | 4            | ICSP             | Arduino UNO R4 WiFi      |
 | TPF1/E-PT1000                                 | Temperatura Radiante               | 1            | ICSP             | Arduino UNO R4 WiFi      |
-| Wind Sensor Rev P                             | Velocidad y Dirección del viento   | 1            | ADC              | Arduino UNO R4 WiFi      |
-| SCD30 Sensirion                               | CO₂ y HR                           | 1            | I2C              | Raspberry Pi 4           |
+| Wind Sensor Rev P                             | Velocidad del Viento		     | 1            | ADC              | Arduino UNO R4 WiFi      |
+| SCD30 Sensirion                               | CO₂ y Humedad Relativa             | 1            | I2C              | Raspberry Pi 4           |
 | 5MP OV5647 Wide Angle Fisheye Camera          | Luminancia                         | 1            | SCI              | Raspberry Pi 4           |
 | Micrófono ambiental USB                       | Sonido                             | 1            | USB              | Raspberry Pi 4           |
 
