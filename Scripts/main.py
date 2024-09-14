@@ -29,11 +29,6 @@ try:
         # Publica los datos en ThingsBoard
         client.publish('v1/devices/me/telemetry', json.dumps(sensor_data), 1)
 
-        # Imprime los datos para monitoreo local
-        print(f'CO2: {round(CO2, 2)} ppm')
-        print(f'Temperatura: {round(T, 2)}°C')
-        print(f'Humedad: {round(HR, 2)}% \n')
-
         time.sleep(1)  # Ajusta el intervalo de tiempo entre lecturas
 
 except KeyboardInterrupt:
