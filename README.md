@@ -77,6 +77,7 @@ El equipo responsable del desarrollo y construcción del DTHIS-C está conformad
 | José Ramón Hernández Aguilar | IER-UNAM                   | jrha@ier.unam.mx      |
 | Debra Paola López Domínguez  |                            | dpld@ier.unam.mx      |
 | Edgar Gallardo Pérez         |                            |                       |
+| José William Escobar Escobar |                            |                       |
 
 ---
 
