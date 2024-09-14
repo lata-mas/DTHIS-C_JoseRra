@@ -22,4 +22,8 @@ def scd30_measurements():
     if scd30.get_data_ready():
         # Lee las mediciones del sensor
         CO2, T, HR = scd30.read_measurement()
+        # Redondea cada valor a dos decimales
+        CO2 = round(CO2, 2)
+        T = round(T, 2)
+        HR = round(HR, 2)
         return CO2, T, HR
