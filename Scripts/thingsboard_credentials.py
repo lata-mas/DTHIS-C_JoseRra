@@ -1,8 +1,3 @@
-import paho.mqtt.client as mqtt
-import json
-import time
-import math
-
 def thingsboard_data():
     """
     Proporciona los datos de identificación y autenticación necesarios para conectarse
