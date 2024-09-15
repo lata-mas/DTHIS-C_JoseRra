@@ -13,7 +13,7 @@ El dispositivo está equipado para medir una amplia gama de variables, tales com
   4. 1.7 m
 - **Temperatura radiante**
 - **Humedad relativa**
-- **Velocidad y dirección del viento**
+- **Velocidad del viento**
 - **Concentración de CO₂**
 - **Mapas de luminancia** para evaluar la iluminación
 - **Deslumbramiento**
