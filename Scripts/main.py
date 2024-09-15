@@ -1,6 +1,6 @@
 import paho.mqtt.client as mqtt
-import time
 import json
+import time
 from thingsboard_credentials import thingsboard_data
 from scd30 import scd30_measurements
 
