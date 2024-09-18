@@ -55,11 +55,11 @@ void loop() {
 
   // Obtener la velocidad promedio del viento
   float avgWindSpeed = getAverageWindSpeed();
-  sendWindSpeedDataToThingsBoard(avgWindSpeed);      // Enviar velocidad promedio a ThingsBoard
+  sendWindSpeedDataToThingsBoard(avgWindSpeed);      // Enviar velocidad promedio del viento a ThingsBoard
 
   // Obtener la temperatura del PT1000
   float pt1000Temperature = readPT1000Temperature();
-  sendPT1000TemperatureDataToThingsBoard(pt1000Temperature);  // Enviar temperatura radiante PT1000 a ThingsBoard
+  sendPT1000TemperatureDataToThingsBoard(pt1000Temperature);  // Enviar temperatura radiante a ThingsBoard
 
   mqttClient.loop();  // Mantiene la conexión MQTT activa
   delay(2000);  // Espera 2 segundos antes de la siguiente medición
