@@ -134,5 +134,5 @@ void sendWindSpeedDataToThingsBoard(float avgWindSpeed) {
 void sendPT1000TemperatureDataToThingsBoard(float pt1000Temperature) {
   String topic = "v1/devices/me/telemetry";
   String payload = "{\"TR\":" + String(pt1000Temperature) + "}";
-  mqttClient.publish(topic.c_str(), payload.c_str());  // Publica el dato de temperatura PT1000
+  mqttClient.publish(topic.c_str(), payload.c_str());  // Publica el dato de temperatura radiante
 }
