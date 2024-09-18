@@ -129,7 +129,7 @@ void sendWindSpeedDataToThingsBoard(float avgWindSpeed) {
  * Publica el valor de la temperatura PT1000 en el tema MQTT correspondiente.
  *
  * Parámetros:
- * - pt1000Temperature: Temperatura medida por el sensor PT1000 (en grados Celsius).
+ * - pt1000Temperature: Temperatura radiante (en grados Celsius).
  */
 void sendPT1000TemperatureDataToThingsBoard(float pt1000Temperature) {
   String topic = "v1/devices/me/telemetry";
