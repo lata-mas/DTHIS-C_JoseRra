@@ -31,7 +31,7 @@ El dispositivo se compone de los siguientes sensores y componentes electrónicos
 | TPF1/E-20 PT1000                              | Temperatura Radiante               | 1            | ICSP             | Arduino UNO R4 WiFi      | Adafruit PT1000 RTD-MAX31865 |
 | Wind Sensor Rev P6                            | Velocidad del Viento		     | 1            | ADC              | Arduino UNO R4 WiFi      |				 |
 | SCD30 Sensirion                               | CO₂ y Humedad Relativa             | 1            | I2C              | Raspberry Pi 4           |				 |
-| 5MP OV5647 Wide Angle Fisheye Camera          | Luminancia                         | 1            | SCI              | Raspberry Pi 4           |				 |
+| 5MP OV5647 Wide Angle Fisheye Camera          | Luminancia                         | 1            | CSI              | Raspberry Pi 4           |				 |
 | Micrófono ambiental USB                       | Sonido                             | 1            | USB              | Raspberry Pi 4           |                              |
 
 
