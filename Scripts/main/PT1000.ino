@@ -26,12 +26,12 @@ float readPT1000Temperature() {
   // Verifica y muestra cualquier error del sensor
   uint8_t fault = thermo.readFault();
   if (fault) {
-    if (fault & MAX31865_FAULT_HIGHTHRESH) Serial.println("Fault: High Threshold");
-    if (fault & MAX31865_FAULT_LOWTHRESH) Serial.println("Fault: Low Threshold");
-    if (fault & MAX31865_FAULT_REFINLOW) Serial.println("Fault: Reference In Low");
-    if (fault & MAX31865_FAULT_REFINHIGH) Serial.println("Fault: Reference In High");
-    if (fault & MAX31865_FAULT_RTDINLOW) Serial.println("Fault: RTD In Low");
-    if (fault & MAX31865_FAULT_OVUV) Serial.println("Fault: Over/Under Voltage");
+    if (fault & MAX31865_FAULT_HIGHTHRESH);
+    if (fault & MAX31865_FAULT_LOWTHRESH);
+    if (fault & MAX31865_FAULT_REFINLOW);
+    if (fault & MAX31865_FAULT_REFINHIGH);
+    if (fault & MAX31865_FAULT_RTDINLOW);
+    if (fault & MAX31865_FAULT_OVUV);
     // Limpia los errores del sensor
     thermo.clearFault();
   }
