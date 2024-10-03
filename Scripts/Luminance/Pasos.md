@@ -73,3 +73,36 @@ sudo ./makeall library
 ```bash
 sudo ./makeall install
 ```
+
+---
+
+# Creación de un script de shell con vim
+
+### 1. Abre `vim` y crea un nuevo archivo de script:
+```bash
+vim script.sh
+```
+
+### 2. Entra en el **modo de inserción** presionando la tecla `i`.
+
+### 3. Escribe el contenido del script:
+```bash
+#!/bin/bash
+echo "Hola, este es mi primer script!"
+```
+
+### 4. Una vez que hayas terminado de escribir el script, presiona `Esc` para salir del **modo de inserción**.
+
+### 5. Guarda el archivo y sal de `vim` escribiendo `:wq` y presionando `Enter`. Esto significa:
+- `w` para guardar el archivo.
+- `q` para salir de `vim`.
+
+### 6. Haz el script ejecutable con el siguiente comando:
+```bash
+chmod +x script.sh
+```
+
+### 7. Ejecuta el script:
+```bash
+./script.sh
+```
