@@ -25,6 +25,7 @@ sudo apt install libcamera-apps
 libcamera-still -o imagen.jpg
 ```
 
+---
 
 # Instalación de Radiance 
 
