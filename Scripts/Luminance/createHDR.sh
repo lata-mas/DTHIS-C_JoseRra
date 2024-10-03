@@ -2,18 +2,16 @@
 
 DATE=$(date +"%Y-%m-%d_%H%M")
 
-#raspistill -o /home/pi/Documents/$DATE.jpg
-
-raspistill -n -r -ISO 100 -awb sun -t 500 -ss 100 -o 1.jpg
-raspistill -n -r -ISO 100 -awb sun -t 500 -ss 500 -o 2.jpg
-raspistill -n -r -ISO 100 -awb sun -t 500 -ss 1000 -o 3.jpg
-raspistill -n -r -ISO 100 -awb sun -t 500 -ss 5000 -o 4.jpg
-raspistill -n -r -ISO 100 -awb sun -t 500 -ss 10000 -o 5.jpg
-raspistill -n -r -ISO 100 -awb sun -t 500 -ss 50000 -o 6.jpg
-raspistill -n -r -ISO 100 -awb sun -t 500 -ss 100000 -o 7.jpg
-raspistill -n -r -ISO 100 -awb sun -t 500 -ss 500000 -o 8.jpg
-raspistill -n -r -ISO 100 -awb sun -t 500 -ss 1000000 -o 9.jpg
-raspistill -n -r -ISO 100 -awb sun -t 500 -ss 2000000 -o 10.jpg
+libcamera-still --nopreview --raw -o 1.jpg --shutter 100 --iso 100 --awb sun --timeout 100
+libcamera-still --nopreview --raw -o 2.jpg --shutter 100 --iso 100 --awb sun --timeout 500
+libcamera-still --nopreview --raw -o 3.jpg --shutter 100 --iso 100 --awb sun --timeout 1000
+libcamera-still --nopreview --raw -o 4.jpg --shutter 100 --iso 100 --awb sun --timeout 5000
+libcamera-still --nopreview --raw -o 5.jpg --shutter 100 --iso 100 --awb sun --timeout 10000
+libcamera-still --nopreview --raw -o 6.jpg --shutter 100 --iso 100 --awb sun --timeout 50000
+libcamera-still --nopreview --raw -o 7.jpg --shutter 100 --iso 100 --awb sun --timeout 100000
+libcamera-still --nopreview --raw -o 8.jpg --shutter 100 --iso 100 --awb sun --timeout 500000
+libcamera-still --nopreview --raw -o 9.jpg --shutter 100 --iso 100 --awb sun --timeout 1000000
+libcamera-still --nopreview --raw -o 10.jpg --shutter 100 --iso 100 --awb sun --timeout 2000000
 
 python3 PyDNG/examples/utility.py 1.jpg
 python3 PyDNG/examples/utility.py 2.jpg
