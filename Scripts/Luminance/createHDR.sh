@@ -2,16 +2,16 @@
 
 DATE=$(date +"%Y-%m-%d_%H%M")
 
-libcamera-still --nopreview --raw -o 1.jpg --shutter 100 --iso 100 --awb sun --timeout 100
-libcamera-still --nopreview --raw -o 2.jpg --shutter 100 --iso 100 --awb sun --timeout 500
-libcamera-still --nopreview --raw -o 3.jpg --shutter 100 --iso 100 --awb sun --timeout 1000
-libcamera-still --nopreview --raw -o 4.jpg --shutter 100 --iso 100 --awb sun --timeout 5000
-libcamera-still --nopreview --raw -o 5.jpg --shutter 100 --iso 100 --awb sun --timeout 10000
-libcamera-still --nopreview --raw -o 6.jpg --shutter 100 --iso 100 --awb sun --timeout 50000
-libcamera-still --nopreview --raw -o 7.jpg --shutter 100 --iso 100 --awb sun --timeout 100000
-libcamera-still --nopreview --raw -o 8.jpg --shutter 100 --iso 100 --awb sun --timeout 500000
-libcamera-still --nopreview --raw -o 9.jpg --shutter 100 --iso 100 --awb sun --timeout 1000000
-libcamera-still --nopreview --raw -o 10.jpg --shutter 100 --iso 100 --awb sun --timeout 2000000
+libcamera-still --nopreview -o 1.jpg --raw -t 500ms --shutter 100us --gain 1 --awb sunlight
+libcamera-still --nopreview -o 2.jpg --raw -t 500ms --shutter 500us --gain 1 --awb sunlight
+libcamera-still --nopreview -o 3.jpg --raw -t 500ms --shutter 1000us --gain 1 --awb sunlight
+libcamera-still --nopreview -o 4.jpg --raw -t 500ms --shutter 5000us --gain 1 --awb sunlight
+libcamera-still --nopreview -o 5.jpg --raw -t 500ms --shutter 10000us --gain 1 --awb sunlight
+libcamera-still --nopreview -o 6.jpg --raw -t 500ms --shutter 50000us --gain 1 --awb sunlight
+libcamera-still --nopreview -o 7.jpg --raw -t 500ms --shutter 100000us --gain 1 --awb sunlight
+libcamera-still --nopreview -o 8.jpg --raw -t 500ms --shutter 500000us --gain 1 --awb sunlight
+libcamera-still --nopreview -o 9.jpg --raw -t 500ms --shutter 1000000us --gain 1 --awb sunlight
+libcamera-still --nopreview -o 10.jpg --raw -t 500ms --shutter 2000000us --gain 1 --awb sunlight
 
 python3 PyDNG/examples/utility.py 1.jpg
 python3 PyDNG/examples/utility.py 2.jpg
