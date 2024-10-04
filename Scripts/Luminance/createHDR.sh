@@ -1,17 +1,17 @@
 #!/bin/bash
 
-DATE=$(date +"%Y-%m-%d_%H%M")
+DATE=$(date +"%Y-%m-%d_%H%M")  
 
-libcamera-still --nopreview -o 1.jpg --raw -t 500ms --shutter 100us --gain 1 --awb sunlight
-libcamera-still --nopreview -o 2.jpg --raw -t 500ms --shutter 500us --gain 1 --awb sunlight
-libcamera-still --nopreview -o 3.jpg --raw -t 500ms --shutter 1000us --gain 1 --awb sunlight
-libcamera-still --nopreview -o 4.jpg --raw -t 500ms --shutter 5000us --gain 1 --awb sunlight
-libcamera-still --nopreview -o 5.jpg --raw -t 500ms --shutter 10000us --gain 1 --awb sunlight
-libcamera-still --nopreview -o 6.jpg --raw -t 500ms --shutter 50000us --gain 1 --awb sunlight
-libcamera-still --nopreview -o 7.jpg --raw -t 500ms --shutter 100000us --gain 1 --awb sunlight
-libcamera-still --nopreview -o 8.jpg --raw -t 500ms --shutter 500000us --gain 1 --awb sunlight
-libcamera-still --nopreview -o 9.jpg --raw -t 500ms --shutter 1000000us --gain 1 --awb sunlight
-libcamera-still --nopreview -o 10.jpg --raw -t 500ms --shutter 2000000us --gain 1 --awb sunlight
+libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 100 -o 1.jpg
+libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 500 -o 2.jpg
+libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 1000 -o 3.jpg
+libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 5000 -o 4.jpg
+libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 10000 -o 5.jpg
+libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 50000 -o 6.jpg
+libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 100000 -o 7.jpg
+libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 500000 -o 8.jpg
+libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 1000000 -o 9.jpg
+libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 2000000 -o 10.jpg
 
 python3 PyDNG/examples/utility.py 1.jpg
 python3 PyDNG/examples/utility.py 2.jpg
