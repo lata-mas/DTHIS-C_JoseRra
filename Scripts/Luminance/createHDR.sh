@@ -53,5 +53,3 @@ evalglare -V image_final.hdr
 evalglare -V image_final.hdr > illuminance.txt
 
 mv image_final.hdr HDR_images/$DATE.hdr
-
-rclone copy --update --verbose --transfers 5 --checkers 2 --contimeout 60s --timeout 300s --retries 3 --low-level-retries 5 --stats 1s "/home/pi/Desktop/Picture_Apolo_1/HDR_images" "HDR: drive"
