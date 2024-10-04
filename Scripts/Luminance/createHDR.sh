@@ -13,19 +13,6 @@ libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 500000 -o 8.jpg
 libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 1000000 -o 9.jpg
 libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 2000000 -o 10.jpg
 
-python3 PyDNG/examples/utility.py 1.jpg
-python3 PyDNG/examples/utility.py 2.jpg
-python3 PyDNG/examples/utility.py 3.jpg
-python3 PyDNG/examples/utility.py 4.jpg
-python3 PyDNG/examples/utility.py 5.jpg
-python3 PyDNG/examples/utility.py 6.jpg
-python3 PyDNG/examples/utility.py 7.jpg
-python3 PyDNG/examples/utility.py 8.jpg
-python3 PyDNG/examples/utility.py 9.jpg
-python3 PyDNG/examples/utility.py 10.jpg
-
-raw2hdr -a -e -g -f -h -w -o im.hdr *.dng
-
 #Get info about the final HDR
 getinfo im.hdr
 
