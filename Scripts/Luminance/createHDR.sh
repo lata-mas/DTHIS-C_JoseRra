@@ -13,9 +13,6 @@ for i in "${!SHUTTER_SPEEDS[@]}"; do
   libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter ${SHUTTER_SPEEDS[$i]} -o "$OUTPUT_DIR/$((i+1)).dng"
 done
 
-# Remove the .jpg files
-rm *.jpg
-
 #Get info about the final HDR
 getinfo im.hdr
 
