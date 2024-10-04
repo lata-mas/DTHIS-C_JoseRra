@@ -2,16 +2,16 @@
 
 DATE=$(date +"%Y-%m-%d_%H%M")  
 
-libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 100 -o ~/Radiance/Images 1.jpg
-libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 500 -o ~/Radiance/Images 2.jpg
-libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 1000 -o ~/Radiance/Images 3.jpg
-libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 5000 -o ~/Radiance/Images 4.jpg
-libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 10000 -o ~/Radiance/Images 5.jpg
-libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 50000 -o ~/Radiance/Images 6.jpg
-libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 100000 -o ~/Radiance/Images 7.jpg
-libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 500000 -o ~/Radiance/Images 8.jpg
-libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 1000000 -o ~/Radiance/Images 9.jpg
-libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 2000000 -o ~/Radiance/Images 10.jpg
+libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 100 -o /home/hdeza/Radiance/Images 1.jpg
+libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 500 -o /home/hdeza/Radiance/Images 2.jpg
+libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 1000 -o /home/hdeza/Radiance/Images 3.jpg
+libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 5000 -o /home/hdeza/Radiance/Images 4.jpg
+libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 10000 -o /home/hdeza/Radiance/Images 5.jpg
+libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 50000 -o /home/hdeza/Radiance/Images 6.jpg
+libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 100000 -o /home/hdeza/Radiance/Images 7.jpg
+libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 500000 -o /home/hdeza/Radiance/Images 8.jpg
+libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 1000000 -o /home/hdeza/Radiance/Images 9.jpg
+libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 2000000 -o /home/hdeza/Radiance/Images 10.jpg
 
 python3 PyDNG/examples/utility.py 1.jpg
 python3 PyDNG/examples/utility.py 2.jpg
