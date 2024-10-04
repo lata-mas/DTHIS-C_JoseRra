@@ -2,16 +2,19 @@
 
 DATE=$(date +"%Y-%m-%d_%H%M")  
 
-libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 100 -o 1.jpg
-libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 500 -o 2.jpg
-libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 1000 -o 3.jpg
-libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 5000 -o 4.jpg
-libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 10000 -o 5.jpg
-libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 50000 -o 6.jpg
-libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 100000 -o 7.jpg
-libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 500000 -o 8.jpg
-libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 1000000 -o 9.jpg
-libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter 2000000 -o 10.jpg
+# Set the output directory
+OUTPUT_DIR=/home/hdeza/Radiance/Images
+
+# Define the shutter speeds
+SHUTTER_SPEEDS=(100 500 1000 5000 10000 50000 100000 500000 1000000 2000000)
+
+# Take photos with different shutter speeds and save in .dng format
+for i in "${!SHUTTER_SPEEDS[@]}"; do
+  libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter ${SHUTTER_SPEEDS[$i]} -o "$OUTPUT_DIR/$((i+1)).dng"
+done
+
+# Remove the .jpg files
+rm *.jpg
 
 #Get info about the final HDR
 getinfo im.hdr
