@@ -3,7 +3,7 @@
 DATE=$(date +"%Y-%m-%d_%H%M")  
 
 # Set the output directory
-OUTPUT_DIR=/home/hdeza/Radiance/Images
+OUTPUT_DIR=/home/hdeza/Illuminance/Images
 
 # Define the shutter speeds
 SHUTTER_SPEEDS=(100 500 1000 5000 10000 50000 100000 500000 1000000 2000000)
@@ -41,4 +41,4 @@ evalglare -V image_final.hdr
 
 evalglare -V image_final.hdr > illuminance.txt
 
-mv image_final.hdr /home/hdeza/Radiance/HDR_images/$DATE.hdr
+mv image_final.hdr /home/hdeza/Illuminance/HDR_images/$DATE.hdr
