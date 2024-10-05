@@ -13,6 +13,8 @@ for i in "${!SHUTTER_SPEEDS[@]}"; do
   libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter ${SHUTTER_SPEEDS[$i]} -o "$OUTPUT_DIR/$((i+1)).dng"
 done
 
+raw2hdr -a -e -g -f -h -w -o im.hdr *.dng
+
 #Get info about the final HDR
 getinfo im.hdr
 
