@@ -41,4 +41,4 @@ evalglare -V image_final.hdr
 
 evalglare -V image_final.hdr > illuminance.txt
 
-mv image_final.hdr HDR_images/$DATE.hdr
+mv image_final.hdr /home/hdeza/Radiance/HDR_images/$DATE.hdr
