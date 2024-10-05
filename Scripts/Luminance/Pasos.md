@@ -69,7 +69,7 @@ cp config.guess ray/src/px/tiff/
 cd ray/
 sudo ./makeall library
 ```
-Cuando se pregunte "Where do you want the library files [/usr/local/lib/ray]?", puedes presionar Enter para aceptar la ruta predeterminada. Luego, cuando te pregunte "Install library files now [n]?", responde y (sí).
+- Cuando se pregunte **"Where do you want the library files [/usr/local/lib/ray]?"**, puedes presionar `Enter` para aceptar la ruta predeterminada. Luego, cuando te pregunte **"Install library files now [n]?"**, responde `y` (sí).
 
 ### 7. Agrega la siguiente línea al archivo `.profile` para configurar el `RAYPATH`:
 Abre el archivo `.profile`:
@@ -92,11 +92,10 @@ Ejecuta el siguiente comando:
 ```bash
 sudo ./makeall install
 ```
-
-- Cuando te pregunte "What is your preferred editor [vi]?", puedes simplemente presionar `Enter` para aceptar la opción predeterminada (vi)
-- Cuando se te pregunte "Where do you want the executables [/usr/local/bin]?", presiona `Enter` para aceptar la ruta predeterminada.
+- Cuando te pregunte **"What is your preferred editor [vi]?"**, puedes simplemente presionar `Enter` para aceptar la opción predeterminada (vi)
+- Cuando se te pregunte **"Where do you want the executables [/usr/local/bin]?"**, presiona `Enter` para aceptar la ruta predeterminada.
 - Tras haber presionado Enter se mostrará la licencia de software de Radiance, presiona q para salir de la visualización y luego responde `y` (sí) para aceptar los términos. Selecciona `2` para Linux cuando se te pregunte por el tipo de sistema.
-- Cuando se te pregunte "Do you want to change it?", presiona `n` (no) para continuar con la configuración predeterminada.
+- Cuando se te pregunte **"Do you want to change it?"**, presiona `n` (no) para continuar con la configuración predeterminada.
 
 ### 9. Verifica la instalación:
 Para asegurarte de que Radiance se haya instalado correctamente, ejecuta:
