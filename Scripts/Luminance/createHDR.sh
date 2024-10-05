@@ -30,7 +30,6 @@ ra_xyze -r -o im.hdr > image_nullEV.hdr
 #Resize image
 pfilt -1 -x 1000 -y 1000 image_nullEV.hdr > image_resize.hdr
 
-
 #Make photometric adjustment
 pcomb -s 1.8 image_resize.hdr > image_photometric.hdr
 
@@ -41,7 +40,6 @@ getinfo -a "VIEW= -vta -vv 121 -vh 121" < image_photometric.hdr > image_final.hd
 echo "Total illuminance is: "
 
 evalglare -V image_final.hdr
-
 evalglare -V image_final.hdr > illuminance.txt
 
 # Move output files to the directory
