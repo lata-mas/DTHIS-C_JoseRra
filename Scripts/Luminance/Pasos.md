@@ -30,49 +30,85 @@ libcamera-still -o imagen.jpg
 # Instalación de Radiance 
 
 ### 1. Instala las dependencias necesarias:
+
 ```bash
 sudo apt install csh make gcc g++ libx11-dev tcl tk
 ```
 
 ### 2. Descarga Radiance y el soporte adicional:
+
 ```bash
 wget https://www.radiance-online.org/software/snapshots/radiance-HEAD.tgz
 wget https://www.radiance-online.org/download-install/radiance-source-code/latest-release/rad5R4supp.tar.gz
 ```
 
-### 3. Descarga `config.guess` y `config.sub`:
+### 3. Descarga config.guess y config.sub:
+
 ```bash
 wget -O config.guess 'http://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.guess;hb=HEAD'
 wget -O config.sub 'http://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.sub;hb=HEAD'
 ```
 
 ### 4. Descomprime los archivos descargados:
+
 ```bash
 tar -xvzf radiance-HEAD.tgz
 tar -xvzf rad5R4supp.tar.gz
 ```
 
-### 5. Copia `config.sub` y `config.guess` al directorio `px/tiff/`:
+### 5. Copia config.sub y config.guess al directorio px/tiff/:
+
 ```bash
 cp config.sub ray/src/px/tiff/
 cp config.guess ray/src/px/tiff/
 ```
 
-### 6. Entra en el directorio `ray/` y compila la librería:
+### 6. Entra en el directorio ray/ y compila la librería:
+
 ```bash
 cd ray/
 sudo ./makeall library
 ```
+Cuando se pregunte "Where do you want the library files [/usr/local/lib/ray]?", puedes presionar Enter para aceptar la ruta predeterminada. Luego, cuando te pregunte "Install library files now [n]?", responde y (sí).
 
-### 7. Agrega la siguiente línea al archivo `.profile` para configurar el `RAYPATH`:
+### 7. Agrega la siguiente línea al archivo .profile para configurar el RAYPATH:
+Abre el archivo .profile:
+
 ```bash
-/usr/local/lib/ray
+nano ~/.profile
 ```
 
+Agrega las siguientes líneas al final del archivo:
+
+```bash
+RAYPATH=.:/usr/local/lib/ray
+export RAYPATH
+```
+Guarda y cierra el archivo presionando Ctrl + O, Enter, y luego Ctrl + X.
+
 ### 8. Compila todo el proyecto:
+Ejecuta el siguiente comando:
+
 ```bash
 sudo ./makeall install
 ```
+
+Cuando te pregunte "What is your preferred editor [vi]?", puedes simplemente presionar Enter para aceptar la opción predeterminada (vi)
+
+Cuando se te pregunte "Where do you want the executables [/usr/local/bin]?", presiona Enter para aceptar la ruta predeterminada.
+
+Tras haber presionado Enter se mostrará la licencia de software de Radiance, presiona q para salir de la visualización y luego responde y (sí) para aceptar los términos. Selecciona 2 para Linux cuando se te pregunte por el tipo de sistema.
+
+Cuando se te pregunte "Do you want to change it?", presiona n (no) para continuar con la configuración predeterminada.
+
+### 9. Verifica la instalación:
+Para asegurarte de que Radiance se haya instalado correctamente, ejecuta:
+
+```bash
+which rad
+```
+
+Esto debería devolver la ruta del ejecutable rad si la instalación fue exitosa.
 
 ---
 
