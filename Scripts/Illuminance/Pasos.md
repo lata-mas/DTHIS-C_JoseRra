@@ -115,7 +115,13 @@ sudo apt-get install libjpeg62-turbo-dev gettext liblcms2-dev
 #### exiftool
 Para instalar `exiftool`, ejecuta el siguiente comando:
 ```bash
-sudo apt-get install libjpeg62-turbo-dev gettext liblcms2-dev
+sudo apt install exiftool
+```
+
+### 3. Instalar bibliotecas de fuentes para visualizar imágenes
+Finalmente, necesitas descargar una biblioteca de fuentes para poder visualizar las imágenes. Si no tienes las fuentes instaladas, usa el siguiente comando:
+```bash
+sudo apt-get install xfonts*
 ```
 
 ---
