@@ -96,6 +96,30 @@ Esto debería devolver la ruta del ejecutable rad si la instalación fue exitosa
 
 ---
 
+# Configuración adicional
+
+### 1. Instalar raw2hdr 
+Descarga el software *raw2hdr* desde [aquí](http://www.anyhere.com/gward/pickup/raw2hdr.tgz), descomprime la carpeta y ejecuta el comando `sudo local-gen`.
+
+### 2. Es necesario instalar los programas `hdrgen`, `dcraw` y `exiftool` para que `raw2hdr` se pueda compilar correctamente.  
+
+#### hdrgen 
+Puedes descargar *hdrgen* desde [aquí](http://anyhere.com/gward/pickup/hdrgen_AMDRaspian.tar.gz)  
+
+#### dcraw
+Para instalar *dcraw*, asegúrate de ejecutar el comando:
+```bash
+sudo apt-get install libjpeg62-turbo-dev gettext liblcms2-dev
+```
+
+#### exiftool
+Para instalar `exiftool`, ejecuta el siguiente comando:
+```bash
+sudo apt-get install libjpeg62-turbo-dev gettext liblcms2-dev
+```
+
+---
+
 # Creación de un script de shell con vim
 
 ### 1. Abre `vim` y crea un nuevo archivo de script:
