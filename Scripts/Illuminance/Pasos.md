@@ -121,7 +121,7 @@ Descarga el software *raw2hdr* desde [aquí](http://www.anyhere.com/gward/pickup
 ### 2. Es necesario instalar los programas `hdrgen`, `dcraw` y `exiftool` para que `raw2hdr` se pueda compilar correctamente.  
 
 #### hdrgen 
-Puedes descargar *hdrgen* desde [aquí](http://anyhere.com/gward/pickup/hdrgen_AMDRaspian.tar.gz) (debería descargarse si el enlace lo abres en otra pestaña).  
+Puedes descargar *hdrgen* desde [aquí](http://anyhere.com/gward/pickup/hdrgen_AMDRaspian.tar.gz) (al arrastrar el enlace a otra pestaña se inicia la descarga).  
 - Descomprime el archivo descargado preferentemente sin acudir a la terminal.
 - Tras ello se creará la carpeta `hdrgen_AMDRaspian` en tu **home** con los siguientes archivos ejecutables:
   - hdrcvt
