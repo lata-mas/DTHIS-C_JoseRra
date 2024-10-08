@@ -104,7 +104,10 @@ Descarga el software *raw2hdr* desde [aquí](http://www.anyhere.com/gward/pickup
 - Descomprime el archivo descargado con el siguiente comando:
   ```bash
   tar -xvzf raw2hdr.tgz
-  ```bash
+  ```
+  Tras ello se desplegará...
+
+### 2. 
 
 ### 2. Es necesario instalar los programas `hdrgen`, `dcraw` y `exiftool` para que `raw2hdr` se pueda compilar correctamente.  
 
