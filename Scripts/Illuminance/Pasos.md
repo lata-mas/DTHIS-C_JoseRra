@@ -105,7 +105,7 @@ Descarga el software *raw2hdr* desde [aquí](http://www.anyhere.com/gward/pickup
   ```bash
   tar -xvzf raw2hdr.tgz
   ```
-  Tras ello se desplegará...
+  Tras ello se creara la carpeta
 
 ### 2. 
 
