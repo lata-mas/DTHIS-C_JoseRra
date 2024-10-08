@@ -99,31 +99,32 @@ Esto debería devolver la ruta del ejecutable rad si la instalación fue exitosa
 # Configuración adicional
 
 ### 1. Instalar raw2hdr 
-Descarga el software *raw2hdr* desde [aquí](http://www.anyhere.com/gward/pickup/raw2hdr.tgz).
+Descarga el software *raw2hdr* desde [aquí](http://www.anyhere.com/gward/pickup/raw2hdr.tgz) (debería descargarse si el enlace lo abres en otra pestaña). 
 
-- Descomprime el archivo descargado con el siguiente comando:
+- Descomprime el archivo descargado con el siguiente comando, aunque igualmente puedes descomprimirlo sin la necesidad de acudir a la terminal:
   ```bash
   tar -xvzf raw2hdr.tgz
   ```
-  Tras ello se creara la carpeta
+- Tras ello se creará la carpeta `raw2hdr` en tu **home** con los siguientes archivos ejecutables:
+  - dcraw (Descartar)
+  - exiftool
+  - hdrgen (Descartar)
+  - raw2hdr
 
-### 2. 
+- Para poder utilizar los comandos de los programas desde cualquier lugar, los archivos ejecutables deben encontrarse en `/usr/local/bin/`:
+  ```bash
+  sudo cp exiftool raw2hdr /usr/local/bin/
+  ```
 
-### 2. Es necesario instalar los programas `hdrgen`, `dcraw` y `exiftool` para que `raw2hdr` se pueda compilar correctamente.  
+### 2. Es necesario instalar los programas `hdrgen` y `dcraw` para que `raw2hdr` se pueda compilar correctamente.  
 
 #### hdrgen 
-Puedes descargar *hdrgen* desde [aquí](http://anyhere.com/gward/pickup/hdrgen_AMDRaspian.tar.gz).  
+Puedes descargar *hdrgen* desde [aquí](http://anyhere.com/gward/pickup/hdrgen_AMDRaspian.tar.gz) (debería descargarse si el enlace lo abres en otra pestaña).  
 
 #### dcraw
 Para instalar *dcraw*, asegúrate de ejecutar el comando:
 ```bash
 sudo apt-get install libjpeg62-turbo-dev gettext liblcms2-dev
-```
-
-#### exiftool
-Para instalar `exiftool`, ejecuta el siguiente comando:
-```bash
-sudo apt install exiftool
 ```
 
 ### 3. Instalar bibliotecas de fuentes para visualizar imágenes
