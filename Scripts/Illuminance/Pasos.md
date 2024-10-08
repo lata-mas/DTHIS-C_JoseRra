@@ -99,7 +99,7 @@ Esto debería devolver la ruta del ejecutable rad si la instalación fue exitosa
 # Configuración adicional
 
 ### 1. Instalar raw2hdr 
-Descarga el software *raw2hdr* desde [aquí](http://www.anyhere.com/gward/pickup/raw2hdr.tgz) (debería descargarse si el enlace lo abres en otra pestaña). 
+Descarga el software *raw2hdr* desde [aquí](http://www.anyhere.com/gward/pickup/raw2hdr.tgz) (debería descargarse si arrastras el enlace hacia otra pestaña). 
 - Descomprime el archivo descargado con el siguiente comando, aunque igualmente puedes descomprimirlo sin la necesidad de acudir a la terminal:
   ```bash
   tar -xvzf raw2hdr.tgz
