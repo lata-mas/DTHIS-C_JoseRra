@@ -1,3 +1,7 @@
+Executing: hdrgen -m 400 -e -a -r /tmp/raw2hdr.m476z2/sqr.rsp -a -e -g -f -o im.hdr -c sRGB /tmp/raw2hdr.m476z2/10.tif /tmp/raw2hdr.m476z2/1.tif /tmp/raw2hdr.m476z2/2.tif /tmp/raw2hdr.m476z2/3.tif /tmp/raw2hdr.m476z2/4.tif /tmp/raw2hdr.m476z2/5.tif /tmp/raw2hdr.m476z2/6.tif /tmp/raw2hdr.m476z2/7.tif /tmp/raw2hdr.m476z2/8.tif /tmp/raw2hdr.m476z2/9.tif
+phdrimg.cpp@564>data: /tmp/raw2hdr.m476z2/10.tif: needs exposure calibration
+hdrgenmain.cpp@187>data: Failure generating HDR image
+
 #!/bin/bash
 
 DATE=$(date +"%Y-%m-%d_%H%M")  
