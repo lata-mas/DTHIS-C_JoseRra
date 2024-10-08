@@ -134,7 +134,7 @@ Puedes descargar *hdrgen* desde [aquí](http://anyhere.com/gward/pickup/hdrgen_A
 #### dcraw
 Para instalar *dcraw*, asegúrate de ejecutar el comando:
 ```bash
-sudo apt-get install libjpeg62-turbo-dev gettext liblcms2-dev
+sudo apt-get install dcraw
 ```
 
 ### 3. Instalar bibliotecas de fuentes para visualizar imágenes
