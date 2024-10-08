@@ -101,6 +101,11 @@ Esto debería devolver la ruta del ejecutable rad si la instalación fue exitosa
 ### 1. Instalar raw2hdr 
 Descarga el software *raw2hdr* desde [aquí](http://www.anyhere.com/gward/pickup/raw2hdr.tgz).
 
+- Descomprime el archivo descargado con el siguiente comando:
+  ```bash
+  tar -xvzf raw2hdr.tgz
+  ```bash
+
 ### 2. Es necesario instalar los programas `hdrgen`, `dcraw` y `exiftool` para que `raw2hdr` se pueda compilar correctamente.  
 
 #### hdrgen 
