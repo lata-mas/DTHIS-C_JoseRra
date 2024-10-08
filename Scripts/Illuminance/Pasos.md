@@ -147,7 +147,7 @@ wget https://exiftool.org/Image-ExifTool-12.97.tar.gz
   gzip -dc Image-ExifTool-12.97.tar.gz | tar -xf -
   cd Image-ExifTool-12.97
   ```
-- Finalmente procede a la instalación:
+- Procede a instalarlo:
   ```bash
   perl Makefile.PL
   sudo make install
