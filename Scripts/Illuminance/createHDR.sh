@@ -16,7 +16,7 @@ for i in "${!SHUTTER_SPEEDS[@]}"; do
   libcamera-still -n -r --gain 1 --awb daylight -t 500 --shutter ${SHUTTER_SPEEDS[$i]} -o "$IMAGE_DIR/$((i+1)).dng"
 done
 
-raw2hdr -a -e -g -f -h -w -o im.hdr *.dng
+raw2hdr -a -e -g -f -h -w -o im.hdr ./Illuminance/Images/.dng
 
 #Get info about the final HDR
 getinfo im.hdr
@@ -38,7 +38,6 @@ getinfo -a "VIEW= -vta -vv 121 -vh 121" < image_photometric.hdr > image_final.hd
 
 #Print illuminance value
 echo "Total illuminance is: "
-
 evalglare -V image_final.hdr
 evalglare -V image_final.hdr > illuminance.txt
 
