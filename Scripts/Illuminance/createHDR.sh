@@ -49,3 +49,15 @@ mv image_resize.hdr $OUTPUT_DIR/
 mv illuminance.txt $OUTPUT_DIR/
 
 mv image_final.hdr /home/hdeza/Illuminance/HDR_images/$DATE.hdr
+
+
+sh: 1: dcraw: Exec format error
+dcraw failed at /usr/local/bin/raw2hdr line 99.
+im.hdr: cannot open
+ra_xyze: can't open input "im.hdr"
+pfilt: bad picture size
+image_resize.hdr: bad picture size
+Bad header!
+Total illuminance is: 
+error reading line 511
+error reading line 511
