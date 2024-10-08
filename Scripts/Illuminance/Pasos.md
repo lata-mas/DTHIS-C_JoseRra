@@ -118,7 +118,7 @@ Descarga el software *raw2hdr* desde [aquí](http://www.anyhere.com/gward/pickup
   sudo cp exiftool raw2hdr /usr/local/bin/
   ```
 
-### 2. Es necesario instalar los programas `hdrgen`, `dcraw y `exiftool` para que `raw2hdr` se pueda compilar correctamente.  
+### 2. Es necesario instalar los programas `hdrgen`, `dcraw` y `exiftool` para que `raw2hdr` se pueda compilar correctamente.  
 
 #### hdrgen 
 Puedes descargar *hdrgen* desde [aquí](http://anyhere.com/gward/pickup/hdrgen_AMDRaspian.tar.gz) (debería descargarse si el enlace lo abres en otra pestaña).  
