@@ -111,7 +111,12 @@ Descarga el software *raw2hdr* desde [aquí](http://www.anyhere.com/gward/pickup
   - hdrgen (Descartar)
   - raw2hdr
 
-- Para poder utilizar los comandos de los programas desde cualquier lugar, los archivos ejecutables deben encontrarse en `/usr/local/bin/`:
+- Para que raw2hdr funcione con imágenes DNG, accede al archivo ejecutable `raw2hdr` y agrega lo siguiente a la configuración del array `@exiftags"` :
+  ```bash
+  -ISO -ApertureValue>FNumber
+  ```
+
+- Finalmente para utilizar los comandos de los programas desde cualquier ubicación, los archivos ejecutables deben encontrarse en `/usr/local/bin/`:
   ```bash
   sudo cp exiftool raw2hdr /usr/local/bin/
   ```
