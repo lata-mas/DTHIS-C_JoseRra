@@ -106,7 +106,7 @@ Descarga el software *raw2hdr* desde [aquí](http://www.anyhere.com/gward/pickup
   ```
 - Tras ello se creará la carpeta `raw2hdr` en tu **home** con los siguientes archivos ejecutables:
   - dcraw (Descartar)
-  - exiftool
+  - exiftool (Descartar)
   - hdrgen (Descartar)
   - raw2hdr
 - Para que raw2hdr funcione con imágenes DNG, accede al archivo ejecutable `raw2hdr` y agrega lo siguiente a la configuración del array `@exiftags` :
@@ -118,7 +118,7 @@ Descarga el software *raw2hdr* desde [aquí](http://www.anyhere.com/gward/pickup
   sudo cp exiftool raw2hdr /usr/local/bin/
   ```
 
-### 2. Es necesario instalar los programas `hdrgen` y `dcraw` para que `raw2hdr` se pueda compilar correctamente.  
+### 2. Es necesario instalar los programas `hdrgen`, `dcraw y `exiftool` para que `raw2hdr` se pueda compilar correctamente.  
 
 #### hdrgen 
 Puedes descargar *hdrgen* desde [aquí](http://anyhere.com/gward/pickup/hdrgen_AMDRaspian.tar.gz) (debería descargarse si el enlace lo abres en otra pestaña).  
@@ -136,6 +136,22 @@ Para instalar *dcraw*, asegúrate de ejecutar el comando:
 ```bash
 sudo apt-get install dcraw
 ```
+
+#### exiftool
+Para descargar *exiftool*, ejecuta la siguiente línea:
+```bash
+wget https://exiftool.org/Image-ExifTool-12.97.tar.gz
+```
+- Una vez descargado, descomprime el archivo y accede al directorio:
+  ```bash
+  gzip -dc Image-ExifTool-12.97.tar.gz | tar -xf -
+  cd Image-ExifTool-12.97
+  ```
+- Finalmente procede a la instalación:
+  ```bash
+  perl Makefile.PL
+  sudo make install
+  ```
 
 ### 3. Instalar bibliotecas de fuentes para visualizar imágenes
 Finalmente, necesitas descargar una biblioteca de fuentes para poder visualizar las imágenes. Si no tienes las fuentes instaladas, usa el siguiente comando:
