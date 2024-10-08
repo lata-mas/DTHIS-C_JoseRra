@@ -100,7 +100,6 @@ Esto debería devolver la ruta del ejecutable rad si la instalación fue exitosa
 
 ### 1. Instalar raw2hdr 
 Descarga el software *raw2hdr* desde [aquí](http://www.anyhere.com/gward/pickup/raw2hdr.tgz) (debería descargarse si el enlace lo abres en otra pestaña). 
-
 - Descomprime el archivo descargado con el siguiente comando, aunque igualmente puedes descomprimirlo sin la necesidad de acudir a la terminal:
   ```bash
   tar -xvzf raw2hdr.tgz
@@ -110,12 +109,10 @@ Descarga el software *raw2hdr* desde [aquí](http://www.anyhere.com/gward/pickup
   - exiftool
   - hdrgen (Descartar)
   - raw2hdr
-
 - Para que raw2hdr funcione con imágenes DNG, accede al archivo ejecutable `raw2hdr` y agrega lo siguiente a la configuración del array `@exiftags"` :
   ```bash
   -ISO -ApertureValue>FNumber
   ```
-
 - Finalmente para utilizar los comandos de los programas desde cualquier ubicación, los archivos ejecutables deben encontrarse en `/usr/local/bin/`:
   ```bash
   sudo cp exiftool raw2hdr /usr/local/bin/
@@ -125,6 +122,14 @@ Descarga el software *raw2hdr* desde [aquí](http://www.anyhere.com/gward/pickup
 
 #### hdrgen 
 Puedes descargar *hdrgen* desde [aquí](http://anyhere.com/gward/pickup/hdrgen_AMDRaspian.tar.gz) (debería descargarse si el enlace lo abres en otra pestaña).  
+- Descomprime el archivo descargado preferentemente sin acudir a la terminal.
+- Tras ello se creará la carpeta `hdrgen_AMDRaspian` en tu **home** con los siguientes archivos ejecutables:
+  - hdrcvt
+  - hdrgen
+- Copia los archivos ejecutables hacia `/usr/local/bin/`:
+  ```bash
+  sudo cp hdrcvt hdrgen /usr/local/bin/
+  ```
 
 #### dcraw
 Para instalar *dcraw*, asegúrate de ejecutar el comando:
