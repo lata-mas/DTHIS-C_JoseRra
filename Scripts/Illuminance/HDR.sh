@@ -1,3 +1,5 @@
+https://github.com/schoolpost/PiDNG
+
 #!/bin/bash
 
 DATE=$(date +"%Y-%m-%d_%H%M")  
