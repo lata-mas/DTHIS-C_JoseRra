@@ -16,5 +16,8 @@ for i in "${!SHUTTER_SPEEDS[@]}"; do
   rpicam-still -n --gain 1 --awbgains 1,1 -t 500 --shutter "${SHUTTER_SPEEDS[$i]}" -r -o "$IMAGE_DIR/$(printf "%02d" $((i+1))).jpg"
 done
 
+# Delete the .jpg images after creating the HDR image
+rm "$IMAGE_DIR"/*.jpg
+
 # Run raw2hdr with the path to the images
 raw2hdr -c sRGB -C 1.0 -o "/home/hdeza/Illuminance/HDR_images/${DATE}.hdr" "$IMAGE_DIR"/*.dng
