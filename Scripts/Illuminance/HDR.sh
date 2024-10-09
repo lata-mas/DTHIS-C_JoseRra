@@ -13,11 +13,8 @@ SHUTTER_SPEEDS=(100 500 1000 5000 10000 50000 100000 500000 1000000 2000000)
 
 # Take photos with different shutter speeds and save in .dng format
 for i in "${!SHUTTER_SPEEDS[@]}"; do
-  rpicam-still -n --gain 1 --awbgains 1,1 -t 500 --shutter "${SHUTTER_SPEEDS[$i]}" -r -o "$IMAGE_DIR/$(printf "%02d" $((i+1))).jpg"
+  rpicam-still -n --gain 1 --awbgains 1,1 -t 500 --shutter "${SHUTTER_SPEEDS[$i]}" -r -o "$IMAGE_DIR/$(printf "%02d" $((i+1))).dng"
 done
-
-# Delete the .jpg images
-rm "$IMAGE_DIR"/*.jpg
 
 # Run raw2hdr with the path to the images
 raw2hdr -c sRGB -C 1.0 -o "/home/hdeza/Illuminance/HDR_images/${DATE}.hdr" "$IMAGE_DIR"/*.dng
