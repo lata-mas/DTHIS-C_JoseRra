@@ -1,5 +1,3 @@
-https://www.raspberrypi.com/documentation/computers/camera_software.html#libcamera
-
 #!/bin/bash
 
 DATE=$(date +"%Y-%m-%d_%H%M")  
