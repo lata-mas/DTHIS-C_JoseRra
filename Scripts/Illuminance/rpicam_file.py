@@ -22,6 +22,8 @@ def print_dimensions(rawFrame):
 
 # pass camera reference into the converter.
 r = RPICAM2DNG(camera)
-r.options(path="", compress=True)
+r.options(path="", compress=False)  # Set compress=False as you requested
 r.filter = print_dimensions
-r.convert(data, filename="output")
+
+# Convert and save the DNG image
+r.convert(data, filename="/home/hdeza/Illuminance/DNG_images/02.dng")
