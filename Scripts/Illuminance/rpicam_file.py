@@ -8,7 +8,7 @@ data = np.fromfile(img, dtype=np.uint8)
 
 # choose a predefined camera model, set the sensor mode and bayer layout. 
 # this camera model class sets the appropriate DNG's tags needed based on the camera sensor. ( needed for bit unpacking, color matrices )
-camera = RaspberryPiHqCamera(1, CFAPattern.BGGR)
+camera = Picamera2Camera(1, CFAPattern.BGGR)
 
 # example of adding custom DNG tags to predefined tags from camera model
 camera.tags.set(Tag.ApertureValue, [[4,1]])             # F 4.0
