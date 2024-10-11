@@ -16,7 +16,8 @@ for i in "${!SHUTTER_SPEEDS[@]}"; do
   rpicam-still -n --gain 1 -t 500 --shutter "${SHUTTER_SPEEDS[$i]}" -o "$IMAGE_DIR/$(printf "%02d" $((i+1))).jpg"
 done
 
-venvs/dthis-c/bin/pidng/dng.py
+source venvs/dthis-c/bin/activate
+python venvs/dthis-c/bin/pidng/dng.py
 
 # Run raw2hdr with the path to the images
 # raw2hdr -a -e -g -f -h -w -o "/home/hdeza/Illuminance/HDR_images/${DATE}.hdr" "$IMAGE_DIR"/*.dng
