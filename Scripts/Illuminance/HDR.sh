@@ -3,7 +3,7 @@
 DATE=$(date +"%Y-%m-%d_%H%M")  
 
 # Set the output directory for images
-IMAGE_DIR=/home/hdeza/Illuminance/RAW_images
+IMAGE_DIR=/home/hdeza/Illuminance/images
 
 # Set the output directory for other files
 OUTPUT_DIR=/home/hdeza/Illuminance
