@@ -15,14 +15,9 @@ sudo apt update && sudo apt upgrade
 sudo reboot
 ```
 
-### 4. Instalar libcamera
+### 4. Tomar una foto
 ```bash
-sudo apt install libcamera-apps
-```
-
-### 5. Tomar una foto
-```bash
-libcamera-still -o imagen.jpg
+rpicam-still -o imagen.jpg
 ```
 
 ---
