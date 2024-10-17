@@ -40,4 +40,4 @@ evalglare -V "$IMG_DIR/image_final.hdr" > "$OUTPUT_DIR/illuminance.txt"
 mv "$IMG_DIR/image_final.hdr" "$HDR_IMG/$DATE.hdr"
 
 # Make the luminance map
-falsecolor -i "$HDR_IMG/$DATE.hdr" > "$MAPS_DIR/${DATE}_map.hdr"
+falsecolor -i "$HDR_IMG/$DATE.hdr" > "$MAPS_DIR/map.hdr"
