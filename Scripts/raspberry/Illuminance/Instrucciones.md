@@ -120,7 +120,7 @@ Esto debería devolver la ruta del ejecutable rad si la instalación fue exitosa
 
 ---
 
-# Configuración adicional
+## Configuración adicional
 
 ### 1. Instalar raw2hdr 
 Descarga el software *raw2hdr* desde [aquí](http://www.anyhere.com/gward/pickup/raw2hdr.tgz) (debería descargarse si arrastras el enlace hacia otra pestaña). 
