@@ -118,8 +118,6 @@ which rad
 ```
 Esto debería devolver la ruta del ejecutable rad si la instalación fue exitosa.
 
----
-
 ## Configuración adicional
 
 ### 1. Instalar raw2hdr 
