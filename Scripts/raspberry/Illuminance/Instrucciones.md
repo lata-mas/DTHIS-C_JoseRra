@@ -24,43 +24,43 @@ rpicam-still -o imagen.jpg
 
 # Instalación de Radiance 
 
-### 1. Instala las dependencias necesarias:
+### 1. Instalar dependencias
 ```bash
 sudo apt install csh make gcc g++ libx11-dev tcl tk
 ```
 
-### 2. Descarga Radiance y el soporte adicional:
+### 2. Descargar Radiance y soporte adicional
 ```bash
 wget https://www.radiance-online.org/software/snapshots/radiance-HEAD.tgz
 wget https://www.radiance-online.org/download-install/radiance-source-code/latest-release/rad5R4supp.tar.gz
 ```
 
-### 3. Descarga `config.guess` y `config.sub`:
+### 3. Descargar `config.guess` y `config.sub`
 ```bash
 wget -O config.guess 'http://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.guess;hb=HEAD'
 wget -O config.sub 'http://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.sub;hb=HEAD'
 ```
 
-### 4. Descomprime los archivos descargados:
+### 4. Descomprimir archivos
 ```bash
 tar -xvzf radiance-HEAD.tgz
 tar -xvzf rad5R4supp.tar.gz
 ```
 
-### 5. Copia `config.sub` y `config.guess` al directorio `px/tiff/`:
+### 5. Copiar `config.sub` y `config.guess`
 ```bash
 cp config.sub ray/src/px/tiff/
 cp config.guess ray/src/px/tiff/
 ```
 
-### 6. Entra en el directorio `ray/` y compila la librería:
+### 6. Compilar librería
 ```bash
 cd ray/
 sudo ./makeall library
 ```
 - Cuando se pregunte **"Where do you want the library files [/usr/local/lib/ray]?"**, puedes presionar `Enter` para aceptar la ruta predeterminada. Luego, cuando te pregunte **"Install library files now [n]?"**, responde `y` (sí).
 
-### 7. Agrega la siguiente línea al archivo `.profile` para configurar el `RAYPATH`:
+### 7. Configurar `RAYPATH`
 Abre el archivo `.profile`:
 ```bash
 nano ~/.profile
@@ -72,7 +72,7 @@ export RAYPATH
 ```
 Guarda y cierra el archivo presionando `Ctrl + O`, `Enter`, y luego `Ctrl + X`.
 
-### 8. Compila todo el proyecto:
+### 8. Compilar proyecto
 Ejecuta el siguiente comando:
 ```bash
 sudo ./makeall install
@@ -82,7 +82,7 @@ sudo ./makeall install
 - Tras haber presionado `Enter` se mostrará la licencia de software de Radiance, presiona `q` para salir de la visualización y luego responde `y` (sí) para aceptar los términos. Selecciona `2` para Linux cuando se te pregunte por el tipo de sistema.
 - Cuando se te pregunte **"Do you want to change it?"**, presiona `n` (no) para continuar con la configuración predeterminada.
 
-### 9. Verifica la instalación:
+### 9. Verificar instalación
 Para asegurarte de que Radiance se haya instalado correctamente, ejecuta:
 ```bash
 which rad
@@ -113,7 +113,7 @@ Descarga el software *raw2hdr* desde [aquí](http://www.anyhere.com/gward/pickup
   sudo cp exiftool raw2hdr /usr/local/bin/
   ```
 
-### 2. Es necesario instalar los programas `hdrgen`, `dcraw` y `exiftool` para que `raw2hdr` se pueda compilar correctamente.  
+### 2. Instalar programas necesarios  
 
 #### hdrgen 
 Puedes descargar *hdrgen* desde [aquí](http://anyhere.com/gward/pickup/hdrgen_AMDRaspian.tar.gz) (al arrastrar el enlace a otra pestaña se inicia la descarga).  
@@ -148,7 +148,7 @@ wget https://exiftool.org/Image-ExifTool-12.97.tar.gz
   sudo make install
   ```
 
-### 3. Instalar bibliotecas de fuentes para visualizar imágenes
+### 3. Instalar bibliotecas de fuentes
 Finalmente, necesitas descargar una biblioteca de fuentes para poder visualizar las imágenes. Si no tienes las fuentes instaladas, usa el siguiente comando:
 ```bash
 sudo apt-get install xfonts*
@@ -158,31 +158,27 @@ sudo apt-get install xfonts*
 
 # Creación de un script de shell con vim
 
-### 1. Abre `vim` y crea un nuevo archivo de script:
+### 1. Crear archivo de script
 ```bash
 vim script.sh
 ```
 
-### 2. Entra en el **modo de inserción** presionando la tecla `i`.
-
-### 3. Escribe el contenido del script:
+### 2. Escribir contenido del script
+Entra en el **modo de inserción** presionando la tecla `i`.
 ```bash
 #!/bin/bash
 echo "Hola, este es mi primer script!"
 ```
 
-### 4. Una vez que hayas terminado de escribir el script, presiona `Esc` para salir del **modo de inserción**.
+### 4. Guardar y salir de vim
+Presiona `Esc`, escribe `:wq` o `x`, y presiona `Enter`.
 
-### 5. Guarda el archivo y sal de `vim` escribiendo `:wq` y presionando `Enter`. Esto significa:
-- `w` para guardar el archivo.
-- `q` para salir de `vim`.
-
-### 6. Haz el script ejecutable con el siguiente comando:
+### 6. Hacer ejecutable el script
 ```bash
 chmod +x script.sh
 ```
 
-### 7. Ejecuta el script:
+### 7. Ejecutar el script
 ```bash
 ./script.sh
 ```
