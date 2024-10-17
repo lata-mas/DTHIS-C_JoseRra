@@ -1,24 +1,15 @@
 #!/bin/bash
 
-DATE=$(date +"%Y-%m-%d_%H%M")  
-
-# Set the output directory for images
-IMAGE_DIR=/home/hdeza/Illuminance/images
-
-# Set the output directory for other files
-OUTPUT_DIR=/home/hdeza/Illuminance
-
-# Define the shutter speeds
-SHUTTER_SPEEDS=(5000 10000 50000 100000)
-
 # Take photos with different shutter speeds and save in .jpg format
-for i in "${!SHUTTER_SPEEDS[@]}"; do
-  rpicam-still -n --gain 1 -t 500 --shutter "${SHUTTER_SPEEDS[$i]}" -o "$IMAGE_DIR/$(printf "%02d" $((i+1))).jpg"
-done
-
-for i in "${!SHUTTER_SPEEDS[@]}"; do
-    python3 Illuminance/PyDNG/examples/utility.py "$IMAGE_DIR/$(printf "%02d" $((i+1))).jpg"
-done
+rpicam-still --raw -n --gain 1 -t 500 --shutter 1000 -o /home/hdeza/Illuminance/images/01.jpg
+rpicam-still --raw -n --gain 1 -t 500 --shutter 2000 -o /home/hdeza/Illuminance/images/02.jpg
+rpicam-still --raw -n --gain 1 -t 500 --shutter 4000 -o /home/hdeza/Illuminance/images/03.jpg
+rpicam-still --raw -n --gain 1 -t 500 --shutter 8000 -o /home/hdeza/Illuminance/images/04.jpg
+rpicam-still --raw -n --gain 1 -t 500 --shutter 16000 -o /home/hdeza/Illuminance/images/05.jpg
+rpicam-still --raw -n --gain 1 -t 500 --shutter 32000 -o /home/hdeza/Illuminance/images/06.jpg
+rpicam-still --raw -n --gain 1 -t 500 --shutter 64000 -o /home/hdeza/Illuminance/images/08.jpg
+rpicam-still --raw -n --gain 1 -t 500 --shutter 128000 -o /home/hdeza/Illuminance/images/09.jpg
+rpicam-still --raw -n --gain 1 -t 500 --shutter 256000 -o /home/hdeza/Illuminance/images/10.jpg
 
 # Run raw2hdr with the path to the images
-# raw2hdr -a -e -g -f -h -w -o "/home/hdeza/Illuminance/HDR_images/${DATE}.hdr" "$IMAGE_DIR"/*.dng
+raw2hdr -a -e -g -f -h -w -o "/home/hdeza/Illuminance/HDR_images/image.hdr" /home/hdeza/Illuminance/images/*dng
