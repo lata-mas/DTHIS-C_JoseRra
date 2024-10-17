@@ -3,7 +3,7 @@
 DATE=$(date +"%Y-%m-%d_%H%M")
 IMG_DIR="/home/hdeza/Illuminance/images"
 HDR_IMG="/home/hdeza/Illuminance/HDR_images"
-OUTPUT_DIR="/home/hdeza/Illuminance"  # Directorio para los archivos adicionales
+OUTPUT_DIR="/home/hdeza/Illuminance"
 
 # Loop through shutter speeds and capture images
 SHUTTERS=(1000 2000 4000 8000 16000 32000 64000 128000 256000 512000)
