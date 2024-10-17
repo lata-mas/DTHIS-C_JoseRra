@@ -176,10 +176,19 @@ wget https://exiftool.org/Image-ExifTool-12.97.tar.gz
   ```
 
 ### 3. Instalar bibliotecas de fuentes
-Finalmente, necesitas descargar una biblioteca de fuentes para poder visualizar las imágenes. Si no tienes las fuentes instaladas, usa el siguiente comando:
+Finalmente, necesitas descargar una biblioteca de fuentes para poder visualizar las imágenes:
 ```bash
 sudo apt-get install xfonts*
 ```
 
 ---
 
+# Visualización de imágenes .hdr con Radiance
+Para visualizar la imagen `.hdr` generada tras haber ejecutado el script [createHDR.sh](https://github.com/lata-mas/DTHIS-C_JoseRra/blob/main/Scripts/raspberry/Illuminance/createHDR.sh), es necesario ejecutar el siguiente comando:
+```bash
+ximage /home/hdeza/Illuminance/HDR_images/2024-10-16_2101.hdr
+```
+Si se desea visualizar en `false color`, este se aplica de la siguiente forma:
+```bash
+falsecolor -i /home/hdeza/Illuminance/HDR_images/image.hdr | ximage
+```
