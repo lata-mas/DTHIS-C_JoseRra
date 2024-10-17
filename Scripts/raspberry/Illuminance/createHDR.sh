@@ -1,6 +1,5 @@
 #!/bin/bash
 
-DATE=$(date +"%Y-%m-%d_%H%M")
 IMG_DIR="/home/hdeza/Illuminance/images"
 HDR_IMG="/home/hdeza/Illuminance/HDR_images"
 MAPS_DIR="/home/hdeza/Illuminance/maps"
@@ -36,8 +35,8 @@ echo "Total illuminance is: "
 evalglare -V "$IMG_DIR/image_final.hdr"
 evalglare -V "$IMG_DIR/image_final.hdr" > "$OUTPUT_DIR/illuminance.txt"
 
-# Move final HDR image to HDR_images with the current date
-mv "$IMG_DIR/image_final.hdr" "$HDR_IMG/$DATE.hdr"
+# Move final HDR image to HDR_images
+mv "$IMG_DIR/image_final.hdr" "$HDR_IMG/image_final.hdr"
 
 # Make the luminance map
-falsecolor -i "$HDR_IMG/$DATE.hdr" > "$MAPS_DIR/map.hdr"
+falsecolor -s 5000 -d 1 -i "$HDR_IMG/image_final.hdr" -log 3 > "$MAPS_DIR/image_map.hdr"
