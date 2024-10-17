@@ -18,10 +18,12 @@ raw2hdr -a -e -g -f -h -w -o "/home/hdeza/Illuminance/HDR_images/image.hdr" /hom
 
 #!/bin/bash
 
-# Define variables for paths, shutter speeds, and date
-IMG_DIR="/home/hdeza/Illuminance/images"
 DATE=$(date +"%Y-%m-%d_%H%M")
-HDR_IMG="/home/hdeza/Illuminance/HDR_images/$DATE.hdr" # Removed "image" from filename
+
+# Define variables for paths
+IMG_DIR="/home/hdeza/Illuminance/images"
+HDR_IMG="/home/hdeza/Illuminance/HDR_images/$DATE.hdr"
+
 SHUTTERS=(1000 2000 4000 8000 16000 32000 64000 128000 256000)
 
 # Loop through shutter speeds and capture images
