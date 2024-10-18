@@ -40,7 +40,7 @@ evalglare -V "$IMG_DIR/image_final_$DATE.hdr" > "$OUTPUT_DIR/illuminance_$DATE.t
 mv "$IMG_DIR/image_final_$DATE.hdr" "$HDR_IMG/image_final_$DATE.hdr"
 
 # Crop to a 180 degree view
-pcomb -e 'Cx:xmax/2;Cy:ymax/2;R:600;sq(x):x*x' -e 'inC=sq(R)-sq(x-Cx)-sq(y-Cy)' -e 'ro=if(inC,ri(1),0);go=if(inC,gi(1),0);bo=if(inC,bi(1),0)' "$HDR_IMG/image_final_$DATE.hdr" -o "$HDR_IMG/image_crop_$DATE.hdr"
+pcomb -e 'Cx:500;Cy:500;R:500;sq(x):x*x' -e 'inC=sq(R)-sq(x-Cx)-sq(y-Cy)' -e 'ro=if(inC,ri(1),0);go=if(inC,gi(1),0);bo=if(inC,bi(1),0)' "$HDR_IMG/image_final_$DATE.hdr" > "$HDR_IMG/image_crop_$DATE.hdr"
 
 # Make the luminance map with configurations and save it
 falsecolor -s 5000 -d 1 -i "$HDR_IMG/image_crop_$DATE.hdr" --log 3 > "$MAPS_DIR/image_map_$DATE.hdr"
