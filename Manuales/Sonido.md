@@ -1,23 +1,24 @@
-# Creación de un script de shell con vim
+# Configuración inicial
 
-### 1. Crear archivo de script
+### 1. Instalar paqueterías
 ```bash
-vim script.sh
+sudo apt update
+sudo apt install alsa-utils
+sudo apt install sox libsox-fmt-all
 ```
 
-### 2. Escribir contenido del script
-Entra en el **modo de inserción** presionando la tecla `i`.
+### 2. Comprobar micrófono
+Para identificar a que puerto está conectado el micrófono, ejecuta el siguiente comando:
 ```bash
-#!/bin/bash
-echo "Hola, este es mi primer script!"
+arecord -l
 ```
+Se desplegará lo siguiente:
 
-### 4. Guardar y salir de vim
-Presiona `Esc`, escribe `:wq` o `x`, y presiona `Enter`.
+*Añadir imagen*
 
-### 6. Hacer ejecutable el script
+
 ```bash
-chmod +x script.sh
+arecord -D plughw:2,0 -f cd -t wav -d 15 -r 44100
 ```
 
 ### 7. Ejecutar el script
