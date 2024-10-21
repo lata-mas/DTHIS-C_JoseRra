@@ -12,15 +12,15 @@ Entra en el **modo de inserción** presionando la tecla `i`.
 echo "Hola, este es mi primer script!"
 ```
 
-### 4. Guardar y salir de vim
+### 3. Guardar y salir de vim
 Presiona `Esc`, escribe `:wq` o `x`, y presiona `Enter`.
 
-### 6. Hacer ejecutable el script
+### 4. Hacer ejecutable el script
 ```bash
 chmod +x script.sh
 ```
 
-### 7. Ejecutar el script
+### 5. Ejecutar el script
 ```bash
 ./script.sh
 ```
