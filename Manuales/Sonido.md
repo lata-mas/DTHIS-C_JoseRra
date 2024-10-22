@@ -33,22 +33,24 @@ arecord -D plughw:3,0 -f cd -t wav -d 15 -r 44100 audio.wav
 # Creación de un programa para la obtención de datos de los audios
 
 ### 1. Crear scripts acorde a las funciones 
-- [grabar.sh](https://github.com/lata-mas/DTHIS-C_JoseRra/blob/main/Scripts/Raspberry/Sonido/grabar.sh): 
-- [dBmax.sh](https://github.com/lata-mas/DTHIS-C_JoseRra/blob/main/Scripts/Raspberry/Sonido/dBmax.sh)):
-- [dBmin.sh](https://github.com/lata-mas/DTHIS-C_JoseRra/blob/main/Scripts/Raspberry/Sonido/dBmin.sh)):
-- [rms.sh](https://github.com/lata-mas/DTHIS-C_JoseRra/blob/main/Scripts/Raspberry/Sonido/rms.sh):
+- [grabar.sh](https://github.com/lata-mas/DTHIS-C_JoseRra/blob/main/Scripts/Raspberry/Sonido/grabar.sh): Graba 15 segundos de audio en calidad CD. 
+- [dBmax.sh](https://github.com/lata-mas/DTHIS-C_JoseRra/blob/main/Scripts/Raspberry/Sonido/dBmax.sh): Extrae la amplitud máxima del archivo de audio.
+- [dBmin.sh](https://github.com/lata-mas/DTHIS-C_JoseRra/blob/main/Scripts/Raspberry/Sonido/dBmin.sh): Extrae la amplitud mínima del archivo de audio.
+- [rms.sh](https://github.com/lata-mas/DTHIS-C_JoseRra/blob/main/Scripts/Raspberry/Sonido/rms.sh): Extrae la amplitud RMS, una medida de la potencia promedio del audio.
 
-### 2. Actualizar el sistema
+### 2. Crear un ejecutable para correr todos los scripts
+Para evitar que la Raspberry Pi falle por sobrecarga de procesos, se creará un archivo ejecutable `.e` que ejecutará los scripts secuencialmente, asegurando que no haya conflictos entre las instrucciones. Es fundamental especificar la ruta completa del directorio y activar el entorno virtual antes de ejecutar el script que envía la información a ThingsBoard. 
+
+El archivo se crea de la siguiente manera:
 ```bash
-sudo apt update && sudo apt upgrade
+vim executable.e
 ```
 
-### 3. Reiniciar Raspberry Pi
+Y su contenido debe ser el siguiente:
 ```bash
-sudo reboot
-```
-
-### 4. Tomar una foto
-```bash
-rpicam-still -o imagen.jpg
+./home/hdeza/Sonido/grabar.sh
+./home/hdeza/Sonido/dBmax.sh
+./home/hdeza/Sonido/dBmin.sh
+./home/hdeza/Sonido/rms.sh
+./home/hdeza/venvs/dthis-c/bin/python3 /home/hdeza/dthis/scripts/sound.py
 ```
