@@ -18,7 +18,7 @@ arecord -l
 ```
 Se desplegará lo siguiente:
 
-*Añadir imagen*
+![](file:///C:/Users/hdeza/Downloads/terminal.png)
 
 En este caso `card 3` es el puerto al que está conectado el micrófono, por lo tanto al ejecutar el comando para la captura de audio, se deberá definir `plughw:3,0`.
 
