@@ -1,4 +1,4 @@
-# Configuración del micrófono
+# Configuración del micrófono en Raspberry Pi 4
 
 ### 1. Conectar el micrófono
 - Apaga la Raspberry Pi.
