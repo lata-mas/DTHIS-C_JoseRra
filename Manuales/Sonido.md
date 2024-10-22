@@ -1,4 +1,4 @@
-# Configuración inicial
+# Configuración del micrófono
 
 ### 1. Instalar paqueterías
 ```bash
@@ -16,16 +16,13 @@ Se desplegará lo siguiente:
 
 *Añadir imagen*
 
+En este caso `card 3` es el puerto al que esta conectado el micrófono, por lo tanto al ejecutar el comando para la captura de audio, se deberá definir `plughw:3,0`.
 
+### 3. Grabar audio
+Para grabar un audio se ejecuta el siguiente comando:
 ```bash
-arecord -D plughw:2,0 -f cd -t wav -d 15 -r 44100
+arecord -D plughw:3,0 -f cd -t wav -d 15 -r 44100 audio.wav
 ```
-
-### 7. Ejecutar el script
-```bash
-./script.sh
-```
-
 ---
 
 # Configuración de la cámara en Raspberry Pi 4 y captura de fotos
