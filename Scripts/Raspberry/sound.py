@@ -1,9 +1,9 @@
 def sound_data():
     """
-    Función para obtener los datos de sonido desde archivos y redondearlos a dos decimales.
+    Función para obtener los datos de sonido desde archivos.
 
     Retorna:
-        dict: Datos de sonido (RMS, dBmax, dBmin) redondeados.
+        dict: Datos de sonido (RMS, dBmax, dBmin).
     """
     archivos = ['/home/hdeza/Sonido/rms.txt', '/home/hdeza/Sonido/dBmax.txt', '/home/hdeza/Sonido/dBmin.txt']
     rms_x = ""
