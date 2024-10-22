@@ -30,12 +30,13 @@ arecord -D plughw:3,0 -f cd -t wav -d 15 -r 44100 audio.wav
 
 ---
 
-# Configuración de la cámara en Raspberry Pi 4 y captura de fotos
+# Creación de un programa para la obtención de datos de los audios
 
-### 1. Conectar la cámara
-- Apaga la Raspberry Pi.
-- Conecta la cámara al puerto CSI.
-- Asegúrate de que la cinta esté bien conectada, con la parte metálica hacia el conector del puerto.
+### 1. Crear scripts acorde a las funciones 
+- ![grabar.sh](https://github.com/lata-mas/DTHIS-C_JoseRra/blob/main/Scripts/Raspberry/Sonido/grabar.sh): 
+- ![dBmax.sh](https://github.com/lata-mas/DTHIS-C_JoseRra/blob/main/Scripts/Raspberry/Sonido/dBmax.sh)):
+- ![dBmin.sh](https://github.com/lata-mas/DTHIS-C_JoseRra/blob/main/Scripts/Raspberry/Sonido/dBmin.sh)):
+- ![rms.sh](https://github.com/lata-mas/DTHIS-C_JoseRra/blob/main/Scripts/Raspberry/Sonido/rms.sh):
 
 ### 2. Actualizar el sistema
 ```bash
