@@ -83,19 +83,18 @@ El equipo responsable del desarrollo y construcción del DTHIS-C está conformad
 
 > [!Tip]
 > Este repositorio está diseñado para simplificar el desarrollo y uso del dispositivo **DTHIS-C**. Con su uso, podrás acceder a múltiples recursos clave para su implementación y operación eficiente:
-> 
-> ### 1. Uso de sensores
-> Cada sensor integrado en el DTHIS-C tiene su propio directorio en el repositorio, dentro de los cuales encontrarás:
-> - **Indicaciones** para una correcta implementación.
-> - **Código funcional** específico para cada sensor.
->
-> ### 2. Integración con ThingsBoard
-> El repositorio incluye un archivo **main** que recopila las mediciones de todos los sensores y las envía a la plataforma **ThingsBoard** mediante el protocolo **MQTT**. Esto permite la monitorización en tiempo real de las variables.
->
-> ### 3. Manual de uso y ensamblaje
-> Además, el repositorio ofrece un manual detallado que cubre:
-> - **Esquemas de conexión** y **diagramas eléctricos**.
-> - **Instrucciones paso a paso** para el ensamblaje del DTHIS-C.
->
-> 
-> Este repositorio es útil tanto para trabajar con sensores de forma individual como para la construcción completa del dispositivo DTHIS-C.
+
+### 1. Uso de sensores
+Cada sensor integrado en el DTHIS-C tiene su propio directorio en el repositorio, dentro de los cuales encontrarás:
+- **Indicaciones** para una correcta implementación.
+- **Código funcional** específico para cada sensor.
+
+### 2. Integración con ThingsBoard
+El repositorio incluye un archivo **main** que recopila las mediciones de todos los sensores y las envía a la plataforma **ThingsBoard** mediante el protocolo **MQTT**. Esto permite la monitorización en tiempo real de las variables.
+
+### 3. Manual de uso y ensamblaje
+Además, el repositorio ofrece un manual detallado que cubre:
+- **Esquemas de conexión** y **diagramas eléctricos**.
+- **Instrucciones paso a paso** para el ensamblaje del DTHIS-C.
+ 
+Este repositorio es útil tanto para trabajar con sensores de forma individual como para la construcción completa del dispositivo DTHIS-C.
