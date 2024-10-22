@@ -48,9 +48,9 @@ vim executable.e
 
 Y su contenido debe ser el siguiente:
 ```bash
-./home/hdeza/Sonido/grabar.sh
-./home/hdeza/Sonido/dBmax.sh
-./home/hdeza/Sonido/dBmin.sh
-./home/hdeza/Sonido/rms.sh
-./home/hdeza/venvs/dthis-c/bin/python3 /home/hdeza/dthis/scripts/sound.py
+/home/hdeza/Sonido/grabar.sh
+/home/hdeza/Sonido/dBmax.sh
+/home/hdeza/Sonido/dBmin.sh
+/home/hdeza/Sonido/rms.sh
+/home/hdeza/venvs/dthis-c/bin/python3 /home/hdeza/dthis/scripts/sound.py
 ```
