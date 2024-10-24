@@ -101,7 +101,7 @@ bool connectToThingsBoard() {
  * Publica los valores de los termopares en los temas MQTT correspondientes.
  *
  * Parámetros:
- * - temperatures: Arreglo con las mediciones de temperatura (TEMP1 y TEMP2).
+ * - temperatures: Arreglo con las mediciones de temperatura (TEMP1, TEMP2, TEMP3 y TEMP4).
  */
 void sendTemperatureDataToThingsBoard(float* temperatures) {
   for (int i = 0; i < 2; i++) {
