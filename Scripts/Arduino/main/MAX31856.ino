@@ -29,7 +29,6 @@ MAX31856 thermocouples[4];
  * - La inicialización de los termopares solo ocurre la primera vez que se llama a la función.
  * - Se utiliza un array estático para mantener las temperaturas entre llamadas sucesivas a la función.
  */
-
 float* ThermocoupleMeasurements() {
   // Array estático para almacenar las temperaturas de los cuatro termopares
   static float temperatures[4];  
