@@ -1,10 +1,10 @@
 #!/bin/bash
 
 DATE=$(date +"%Y-%m-%d_%H%M")
-IMG_DIR="/home/hdeza/Illuminance/images"
-HDR_IMG="/home/hdeza/Illuminance/HDR_images"
-MAPS_DIR="/home/hdeza/Illuminance/maps"
-OUTPUT_DIR="/home/hdeza/Illuminance"
+IMG_DIR="/home/hdeza/Luminance/images"
+HDR_IMG="/home/hdeza/Luminance/HDR_images"
+MAPS_DIR="/home/hdeza/Luminance/maps"
+OUTPUT_DIR="/home/hdeza/Luminance"
 
 # Loop through shutter speeds and capture images
 SHUTTERS=(1000 2000 4000 8000 16000 32000 64000 128000 256000 512000)
