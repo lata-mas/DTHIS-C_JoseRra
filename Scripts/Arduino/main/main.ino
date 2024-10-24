@@ -106,7 +106,7 @@ bool connectToThingsBoard() {
 void sendTemperatureDataToThingsBoard(float* temperatures) {
   for (int i = 0; i < 2; i++) {
     String topic = "v1/devices/me/telemetry";
-    String payload = (i == 0) ? "{\"TEMP1\":" + String(temperatures[i]) + "}" : "{\"TEMP2\":" + String(temperatures[i]) + "}";
+    String payload = (i == 0) ? "{\"TEMP1\":" + String(temperatures[i]) + "}" : "{\"TEMP2\":" + String(temperatures[i]) + "}" : "{\"TEMP3\":" + String(temperatures[i]) + "}" : "{\"TEMP4\":" + String(temperatures[i]) + "}";
     mqttClient.publish(topic.c_str(), payload.c_str());  // Publica los datos de temperatura
   }
 }
