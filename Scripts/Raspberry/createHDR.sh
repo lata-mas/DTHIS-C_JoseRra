@@ -32,7 +32,7 @@ pcomb -s 1.8 "$OUTPUT_DIR/image_resize_$DATE.hdr" > "$OUTPUT_DIR/image_photometr
 #getinfo -a "VIEW= -vta -vv 121 -vh 121" < "$OUTPUT_DIR/image_photometric_$DATE.hdr" > "$IMG_DIR/image_final_$DATE.hdr"
 
 # Change view angle for fisheye and save the final image in IMG_DIR
-getinfo -a "VIEW= -vta -vv 160 -vh 160" < "$OUTPUT_DIR/image_photometric_$DATE.hdr" > "$IMG_DIR/image_final_$DATE.hdr"
+getinfo -a "VIEW= -vta -vv 120 -vh 160" < "$OUTPUT_DIR/image_photometric_$DATE.hdr" > "$IMG_DIR/image_final_$DATE.hdr"
 
 # Print illuminance value and save result in OUTPUT_DIR
 echo "Total illuminance is: "
