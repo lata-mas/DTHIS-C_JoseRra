@@ -28,10 +28,7 @@ pfilt -1 -x 1000 -y 1000 "$OUTPUT_DIR/image_nullEV_$DATE.hdr" > "$OUTPUT_DIR/ima
 # Make photometric adjustment and save in OUTPUT_DIR
 pcomb -s 1.8 "$OUTPUT_DIR/image_resize_$DATE.hdr" > "$OUTPUT_DIR/image_photometric_$DATE.hdr"
 
-# Change view angle for fisheye and save the final image in IMG_DIR
-#getinfo -a "VIEW= -vta -vv 121 -vh 121" < "$OUTPUT_DIR/image_photometric_$DATE.hdr" > "$IMG_DIR/image_final_$DATE.hdr"
-
-# Change view angle for fisheye and save the final image in IMG_DIR
+# Change view angle for fisheye and save the final image in IMG_DIR (160° horizontal and 120° vertical)
 getinfo -a "VIEW= -vta -vv 120 -vh 160" < "$OUTPUT_DIR/image_photometric_$DATE.hdr" > "$IMG_DIR/image_final_$DATE.hdr"
 
 # Print illuminance value and save result in OUTPUT_DIR
@@ -42,11 +39,11 @@ evalglare -V "$IMG_DIR/image_final_$DATE.hdr" > "$OUTPUT_DIR/illuminance_$DATE.t
 # Move final HDR image to HDR_images
 mv "$IMG_DIR/image_final_$DATE.hdr" "$HDR_IMG/image_final_$DATE.hdr"
 
-# Crop to a 180 degree view
-# pcomb -e 'Cx:500;Cy:500;R:500;sq(x):x*x' -e 'inC=sq(R)-sq(x-Cx)-sq(y-Cy)' -e 'ro=if(inC,ri(1),0);go=if(inC,gi(1),0);bo=if(inC,bi(1),0)' "$HDR_IMG/image_final_$DATE.hdr" > "$HDR_IMG/image_crop_$DATE.hdr"
-
-# Crop to a 160 degree view
-pcomb -e 'Cx:500;Cy:500;R:444.44;sq(x):x*x' -e 'inC=sq(R)-sq(x-Cx)-sq(y-Cy)' -e 'ro=if(inC,ri(1),0);go=if(inC,gi(1),0);bo=if(inC,bi(1),0)' "$HDR_IMG/image_final_$DATE.hdr" > "$HDR_IMG/image_crop_$DATE.hdr"
+# Crop to fit the 160° horizontal and 120° vertical view
+pcomb -e 'Cx:500;Cy:500;Rh:444.44;Rv:333.33;sq(x):x*x' \
+      -e 'inC=(sq(Rh)-sq(x-Cx)-sq(y-Cy))*(sq(Rv)-sq(y-Cy)-sq(x-Cx))' \
+      -e 'ro=if(inC,ri(1),0);go=if(inC,gi(1),0);bo=if(inC,bi(1),0)' \
+      "$HDR_IMG/image_final_$DATE.hdr" > "$HDR_IMG/image_crop_$DATE.hdr"
 
 # Make the luminance map with configurations and save it
 falsecolor -s 5000 -d 1 -i "$HDR_IMG/image_crop_$DATE.hdr" --log 3 > "$MAPS_DIR/image_map_$DATE.hdr"
