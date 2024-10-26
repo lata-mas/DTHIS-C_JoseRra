@@ -1,7 +1,7 @@
 #include <PWFusion_MAX31856.h>
 
 // Definición de pines para los termopares
-uint8_t tcChipSelects[] = {9, 8, 7, 6};  
+uint8_t tcChipSelects[] = {10, 9, 8, 7};  
 
 // Array de objetos MAX31856, uno para cada termopar tipo T
 MAX31856 thermocouples[4];  
