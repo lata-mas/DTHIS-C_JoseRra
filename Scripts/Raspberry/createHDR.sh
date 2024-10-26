@@ -39,7 +39,7 @@ evalglare -V "$IMG_DIR/image_final_$DATE.hdr" > "$OUTPUT_DIR/illuminance_$DATE.t
 # Move final HDR image to HDR_images
 mv "$IMG_DIR/image_final_$DATE.hdr" "$HDR_IMG/image_final_$DATE.hdr"
 
-# Crop to a 160 degree view
+# Crop to a 160
 pcomb -e 'Cx:xmax/2;Cy:ymax/2;R:444.44;sq(x):x*x' -e 'inC=sq(R)-sq(x-Cx)-sq(y-Cy)' -e 'ro=if(inC,ri(1),0);go=if(inC,gi(1),0);bo=if(inC,bi(1),0)' "$HDR_IMG/image_final_$DATE.hdr" > "$HDR_IMG/image_crop_$DATE.hdr"
 
 # Make the luminance map with configurations and save it
