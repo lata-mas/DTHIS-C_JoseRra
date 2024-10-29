@@ -1,0 +1,5 @@
+WiFiNINA==1.8.14
+Adafruit_BusIO==1.16.1
+Adafruit_MAX31865==1.6.2
+PWFusion_MAX31856==1.1.0
+PubSubClient==2.8
