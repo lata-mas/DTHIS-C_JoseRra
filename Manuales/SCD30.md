@@ -13,7 +13,7 @@ sudo raspi-config
 ```
 1. Dentro del menú, es necesario dirigirse al apartado `Interface Options`.
 2. Seleccionar uno por uno: SPI, I2C, Serial Port, 1-Wire.
-3. Al finalizar se reiniciaría la Raspberry.
+3. Al finalizar se reiniciará la Raspberry.
 
 ### 2. Crear un ambiente virtual
 Dentro de la terminal, se creará un directorio que albergue los ambientes virtuales, así mismo dentro de dicho folder, se creará el ambiente ejecutando las siguientes líneas:
