@@ -2,7 +2,7 @@
 
 ### 1. Ensamblar circuito
 Para conectar el sensor solo necesitaremos de una Raspi 4 Model B, la mayoria de sensores SCD30 ya vienen con jumpers para conectar direvcto, en caso contrario solamente usar cables jumpers hembra-hembra y conectarlo como el siguiente diagrama:
-![SCD30](figs/scd30 (1).png)
+![SCD30](figs/scd30(1).png)
 
 ### 2. Crear script de Python
 Ahora vamos a crear un script con el código poniendo el siguiente comando en la terminal:
