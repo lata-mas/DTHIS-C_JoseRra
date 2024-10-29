@@ -28,8 +28,8 @@ Tras haberse creado, debe activarse con el siguiente comando:
 source venvs/dthis-c/bin/activate
 ```
 
-### 3. Instalar librerías 
-Las librerías necesarías para ejecutar los scripts de cada sensor que compone al `DTHIS-C` pueden obtenerse al instalar [requirements.txt](https://github.com/lata-mas/DTHIS-C_JoseRra/blob/main/Scripts/Raspberry/requirements.txt) dentro del entorno virtual.
+### 3. Instalar bibliotecas 
+Las bibliotecas necesarias para ejecutar los scripts de Python de cada sensor que forma parte del DTHIS-C se pueden obtener instalando el archivo [requirements.txt](https://github.com/lata-mas/DTHIS-C_JoseRra/blob/main/Scripts/Raspberry/requirements.txt) dentro del entorno virtual.
 
 1. Activa el entorno virtual:
 ```bash
