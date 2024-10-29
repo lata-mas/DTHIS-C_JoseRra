@@ -1,4 +1,4 @@
-# Creación de un script de shell con vim
+# Creación de un script de shell con Vim
 
 ### 1. Crear archivo de script
 ```bash
