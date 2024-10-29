@@ -5,6 +5,8 @@
 - Conecta la cámara al puerto CSI.
 - Asegúrate de que la cinta esté bien conectada, con la parte metálica hacia el conector del puerto.
 
+![Camera](figs/camera.jpg)
+
 ### 2. Actualizar el sistema
 ```bash
 sudo apt update && sudo apt upgrade
