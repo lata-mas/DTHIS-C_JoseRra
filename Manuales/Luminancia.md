@@ -155,7 +155,7 @@ sudo apt-get install xfonts*
 ---
 
 # Visualización de imágenes .hdr con Radiance
-Para visualizar la imagen `.hdr` generada tras haber ejecutado el script [createHDR.sh](https://github.com/lata-mas/DTHIS-C_JoseRra/blob/main/Scripts/Raspberry/createHDR.sh), es necesario ejecutar el siguiente comando:
+Para visualizar alguna imagen formate `.hdr` generada tras haber ejecutado el script [createHDR.sh](https://github.com/lata-mas/DTHIS-C_JoseRra/blob/main/Scripts/Raspberry/createHDR.sh), es necesario ejecutar el siguiente comando:
 ```bash
 ximage /home/hdeza/Luminance/HDR_images/2024-10-16_2101.hdr
 ```
