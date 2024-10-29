@@ -1,4 +1,4 @@
-# Configuración de la cámara en Raspberry Pi 4 y captura de fotos
+# Configuración de la cámara en Raspberry Pi 4
 
 ### 1. Conectar la cámara
 - Apaga la Raspberry Pi.
