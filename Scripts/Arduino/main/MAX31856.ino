@@ -1,60 +1,48 @@
 #include <PWFusion_MAX31856.h>
 
-// Definición de pines para los termopares
+// Pines para los termopares
 uint8_t tcChipSelects[] = {10, 9, 8, 7};  
-
-// Array de objetos MAX31856, uno para cada termopar tipo T
 MAX31856 thermocouples[4];  
 
 /**
  * Función: ThermocoupleMeasurements
  * 
- * Descripción:
- * Esta función lee las mediciones de temperatura de cuatro termopares tipo T conectados
- * a un shield PWFusion MAX31856. Devuelve un puntero a un array de cuatro posiciones 
- * que contiene las temperaturas medidas por los termopares.
- * 
- * Proceso:
- * - Inicializa los termopares la primera vez que se llama a la función.
- * - Configura los termopares para que operen con el tipo T, filtro de 60 Hz, 
- *   promedio de 4 muestras y modo de medición de un solo disparo.
- * - Inicia la medición de temperatura y espera un breve período para que la lectura
- *   se complete antes de tomar la muestra.
- * - Devuelve un puntero a un array que contiene las cuatro temperaturas medidas.
+ * Lee y calibra las temperaturas de cuatro termopares tipo T.
  * 
  * Retorno:
- * - Puntero a un array de cuatro floats que contienen las temperaturas medidas.
- * 
- * Notas:
- * - La inicialización de los termopares solo ocurre la primera vez que se llama a la función.
- * - Se utiliza un array estático para mantener las temperaturas entre llamadas sucesivas a la función.
+ * - Puntero a un array de cuatro floats con las temperaturas calibradas.
  */
 float* ThermocoupleMeasurements() {
-  // Array estático para almacenar las temperaturas de los cuatro termopares
   static float temperatures[4];  
-
-  // Variable para controlar la inicialización de los termopares
   static bool initialized = false;
 
-  // Inicialización de los termopares solo una vez
+  // Inicialización de los termopares solo la primera vez
   if (!initialized) {
-    // Configuración de cada termopar
     for (int i = 0; i < 4; i++) {
-      thermocouples[i].begin(tcChipSelects[i]);  // Inicializa el termopar con el pin correspondiente
-      // Configura el termopar: tipo T, filtro de 60 Hz, promedio de 4 muestras, modo de medición de un solo disparo
+      thermocouples[i].begin(tcChipSelects[i]);
       thermocouples[i].config(T_TYPE, CUTOFF_60HZ, AVG_SEL_4SAMP, CMODE_OFF);
     }
-    initialized = true;  // Marca como inicializado para evitar reconfiguración
+    initialized = true;
   }
 
-  // Lectura de las temperaturas de cada termopar
+  // Lectura y calibración de las temperaturas
   for (int i = 0; i < 4; i++) {
-    thermocouples[i].startOneShotMeasurement();  // Inicia la medición de temperatura
-    delay(180);  // Espera el tiempo necesario para que la medición se complete
-    thermocouples[i].sample();  // Lee la muestra de temperatura
-    temperatures[i] = thermocouples[i].getTemperature();  // Almacena la temperatura leída
+    thermocouples[i].startOneShotMeasurement();
+    delay(180);
+    thermocouples[i].sample();
+    float rawTemperature = thermocouples[i].getTemperature();
+
+    // Aplica la calibración correspondiente
+    if (i == 0) {
+      temperatures[i] = 1.0452 * rawTemperature + -3.3077;  // Pin 10
+    } else if (i == 1) {
+      temperatures[i] = 1.0483 * rawTemperature + -3.0385;  // Pin 9
+    } else if (i == 2) {
+      temperatures[i] = 1.0292 * rawTemperature + -1.8033;  // Pin 8
+    } else if (i == 3) {
+      temperatures[i] = 1.0437 * rawTemperature + -2.2989;  // Pin 7
+    }
   }
 
-  // Retorna un puntero al array de temperaturas
   return temperatures;
 }
