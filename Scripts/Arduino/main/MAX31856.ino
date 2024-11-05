@@ -34,13 +34,13 @@ float* ThermocoupleMeasurements() {
 
     // Aplica la calibración correspondiente
     if (i == 0) {
-      temperatures[i] = 1.0452 * rawTemperature + -3.3077;  // Pin 10
+      temperatures[i] = 1.0437 * rawTemperature + -2.2989;  // TEMP1 (Pin 10)
     } else if (i == 1) {
-      temperatures[i] = 1.0483 * rawTemperature + -3.0385;  // Pin 9
+      temperatures[i] = 1.0292 * rawTemperature + -1.8033;  // TEMP2 (Pin 9)
     } else if (i == 2) {
-      temperatures[i] = 1.0292 * rawTemperature + -1.8033;  // Pin 8
+      temperatures[i] = 1.0483 * rawTemperature + -3.0385;  // TEMP3 (Pin 8)
     } else if (i == 3) {
-      temperatures[i] = 1.0437 * rawTemperature + -2.2989;  // Pin 7
+      temperatures[i] = 1.0452 * rawTemperature + -3.3077;  // TEMP4 (Pin 7)
     }
   }
 
