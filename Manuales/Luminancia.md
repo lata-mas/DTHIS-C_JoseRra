@@ -110,7 +110,7 @@ Descarga el software `raw2hdr` desde [aquí](http://www.anyhere.com/gward/pickup
   ```
 - Finalmente para utilizar los comandos de los programas desde cualquier ubicación, los archivos ejecutables deben encontrarse en `/usr/local/bin/`:
   ```bash
-  sudo cp exiftool raw2hdr /usr/local/bin/
+  sudo cp raw2hdr/raw2hdr /usr/local/bin/
   ```
 
 ### 2. Instalar programas necesarios  
@@ -156,12 +156,13 @@ sudo apt-get install xfonts*
 
 ---
 
-# Visualización de imágenes .hdr con Radiance
-Para visualizar alguna imagen formato `.hdr` generada tras haber ejecutado el script [createHDR.sh](https://github.com/lata-mas/DTHIS-C_JoseRra/blob/main/Scripts/Raspberry/createHDR.sh), es necesario ejecutar el siguiente comando:
+# Visualización de imágenes .hdr
+Para visualizar alguna imagen formato `.hdr` generada tras haber ejecutado el script [createHDR.sh](https://github.com/lata-mas/DTHIS-C_JoseRra/blob/main/Scripts/Raspberry/createHDR.sh), es necesario instalar la biblioteca `imagemagick`:
 ```bash
-ximage /home/ruta/del/archivo/nombre.hdr
+sudo apt-get install imagemagick
 ```
-Si se desea visualizar en `false color`, este se aplica de la siguiente forma:
+
+Tras ello ejecuta el siguiente comando:
 ```bash
-falsecolor -i /home/ruta/del/archivo/nombre.hdr | ximage
+display /home/ruta/del/archivo/nombre.hdr
 ```
