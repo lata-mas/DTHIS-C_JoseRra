@@ -17,24 +17,8 @@ void initPT1000() {
 
 /**
  * Lee la temperatura del sensor PT1000.
- * 
- * @return La temperatura medida en grados Celsius.
  */
 float readPT1000Temperature() {
   float temperatura = thermo.temperature(RNOMINAL, RREF);
-
-  // Verifica y muestra cualquier error del sensor
-  uint8_t fault = thermo.readFault();
-  if (fault) {
-    if (fault & MAX31865_FAULT_HIGHTHRESH);
-    if (fault & MAX31865_FAULT_LOWTHRESH);
-    if (fault & MAX31865_FAULT_REFINLOW);
-    if (fault & MAX31865_FAULT_REFINHIGH);
-    if (fault & MAX31865_FAULT_RTDINLOW);
-    if (fault & MAX31865_FAULT_OVUV);
-    // Limpia los errores del sensor
-    thermo.clearFault();
-  }
-
   return temperatura;
 }
