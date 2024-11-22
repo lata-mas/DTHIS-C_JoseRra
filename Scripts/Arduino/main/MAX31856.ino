@@ -1,12 +1,11 @@
 #include <PWFusion_MAX31856.h>
 
 // Pines para los termopares
-uint8_t tcChipSelects[] = {10, 9, 8, 7};  
-MAX31856 thermocouples[4];  
+const uint8_t tcChipSelects[] = {10, 9, 8, 7};
+MAX31856 thermocouples[4];
 
 /**
  * Función: ThermocoupleMeasurements
- * 
  * Lee y calibra las temperaturas de cuatro termopares tipo T.
  * 
  * Retorno:
@@ -15,6 +14,10 @@ MAX31856 thermocouples[4];
 float* ThermocoupleMeasurements() {
   static float temperatures[4];  
   static bool initialized = false;
+
+  // Coeficientes de calibración
+  const float m[4] = {1.0460, 1.0600, 1.0801, 1.0547};  // Pendientes
+  const float b[4] = {-2.5241, -2.8834, -4.4269, -3.9315};  // Intersecciones
 
   // Inicialización de los termopares solo la primera vez
   if (!initialized) {
@@ -31,17 +34,7 @@ float* ThermocoupleMeasurements() {
     delay(180);
     thermocouples[i].sample();
     float rawTemperature = thermocouples[i].getTemperature();
-
-    // Aplica la calibración correspondiente
-    if (i == 0) {
-      temperatures[i] = 1.0437 * rawTemperature + -2.2989;  // TEMP1 (Pin 10)
-    } else if (i == 1) {
-      temperatures[i] = 1.0292 * rawTemperature + -1.8033;  // TEMP2 (Pin 9)
-    } else if (i == 2) {
-      temperatures[i] = 1.0483 * rawTemperature + -3.0385;  // TEMP3 (Pin 8)
-    } else if (i == 3) {
-      temperatures[i] = 1.0452 * rawTemperature + -3.3077;  // TEMP4 (Pin 7)
-    }
+    temperatures[i] = m[i] * rawTemperature + b[i];  // Aplica la calibración
   }
 
   return temperatures;
