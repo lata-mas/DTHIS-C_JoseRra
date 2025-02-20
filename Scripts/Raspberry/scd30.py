@@ -9,8 +9,8 @@ def scd30_measurements():
 
     Retorna:
         dict: {'CO2': concentración de CO2 en ppm,
-                'T': temperatura en grados Celsius, 
-                'HR': humedad relativa en porcentaje}
+               'T': temperatura en grados Celsius, 
+               'HR': humedad relativa en porcentaje}
     """
     # Inicializa el sensor SCD30
     scd30 = SCD30()
@@ -24,6 +24,6 @@ def scd30_measurements():
         # Retorna las lecturas redondeadas a dos decimales en un diccionario
         return {
             'CO2': round(CO2, 2),
-            'Temperatura': round(T, 2),
-            'Humedad Relativa': round(HR, 2)
+            'T': round(T, 2),
+            'HR': round(HR, 2)
         }
