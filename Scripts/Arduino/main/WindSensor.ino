@@ -4,10 +4,10 @@ const int OutPin  = A0;   // Pin analógico para el sensor de viento ("OUT")
 const int TempPin = A2;   // Pin analógico para el sensor de temperatura ("TMP")
 
 // Función que lee velocidad de viento y temperatura, y retorna un array de dos floats:
-// windsensor[0] -> velocidad de viento (m/s)
-// windsensor[1] -> temperatura (°C)
-float* WindSpeed() {
-  static float windsensor[2];
+// ws[0] -> velocidad de viento (m/s)
+// ws[1] -> temperatura (°C)
+float* WindSensor() {
+  static float ws[2];
   
   // Lectura del sensor de viento
   int windADunits = analogRead(OutPin);
@@ -24,8 +24,8 @@ float* WindSpeed() {
   // WS = 26.3431 * (correctedVoltage)^(1.4273) * (tempC)^(-0.7631)
   float windSpeed = 26.3431 * pow(correctedVoltage, 1.4273) * pow(tempC, -0.7631);
   
-  windsensor[0] = windSpeed;
-  windsensor[1] = tempC;
+  ws[0] = windSpeed;
+  ws[1] = tempC;
   
-  return windsensor;
+  return ws;
 }
