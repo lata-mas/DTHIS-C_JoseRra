@@ -2,9 +2,9 @@
 #include <PubSubClient.h>
 
 // Definiciones para la red WiFi y ThingsBoard
-#define WIFI_AP "Totalplay-1FA6"          
-#define WIFI_PASSWORD "1FA6FD39hsc5Mnh9" 
-#define TOKEN "1OEilpG3goyYcWLZvuz0"
+#define WIFI_AP "IER"          
+#define WIFI_PASSWORD "acadier2014" 
+#define TOKEN "bXQq1eepFYJV3nldvLTV"
 #define THINGSBOARD_SERVER "tb.ier.unam.mx"
 #define MQTT_PORT 1883
 
@@ -17,124 +17,108 @@ PubSubClient mqttClient(espClient);
  * Configura la conexión WiFi y el cliente MQTT para ThingsBoard.
  */
 void setup() {
-  Serial.begin(115200);  // Inicia la comunicación serial para debugging
-  WiFi.begin(WIFI_AP, WIFI_PASSWORD);  // Conexión a la red WiFi
-
-  // Espera hasta que la conexión WiFi sea exitosa
+  WiFi.begin(WIFI_AP, WIFI_PASSWORD);  // Conectar a la red WiFi
   while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
+    delay(500);  // Espera hasta conectarse
   }
   
-  // Configuración del servidor MQTT
   mqttClient.setServer(THINGSBOARD_SERVER, MQTT_PORT);
-  connectToThingsBoard();  // Conecta a ThingsBoard
-
-  // Inicializa el sensor PT1000
-  initPT1000();
+  connectToThingsBoard();  // Conectar a ThingsBoard
 }
 
 /**
- * Bucle principal del programa.
- * Publica los datos de temperatura y velocidad promedio del viento a ThingsBoard
- * a intervalos regulares.
+ * Ciclo principal del programa.
+ * Mantiene las conexiones y realiza las tareas periódicas.
  */
 void loop() {
-  // Verifica si la conexión WiFi está activa, si no, intenta reconectar
   if (WiFi.status() != WL_CONNECTED) {
-    reconnectWiFi();
+    reconnectWiFi();  // Reconecta WiFi si es necesario
   }
-
-  // Verifica si la conexión MQTT está activa, si no, intenta reconectar
+  
   if (!mqttClient.connected()) {
-    reconnectThingsBoard();
+    reconnectThingsBoard();  // Reconecta MQTT si es necesario
   }
 
   // Obtener las mediciones de los termopares (temperaturas)
-  float* temperatures = ThermocoupleMeasurements();
-  sendTemperatureDataToThingsBoard(temperatures);    // Enviar temperaturas a ThingsBoard
+  float* temperatures = ThermocoupleTemp();
+  sendTC(temperatures);    // Enviar temperaturas a ThingsBoard
+
+  // Obtener la temperatura del TPF1
+  float radiant = TPF1Temp();
+  sendRT(radiant);  // Enviar temperatura radiante a ThingsBoard
 
   // Obtener la velocidad promedio del viento
-  float avgWindSpeed = getAverageWindSpeed();
-  sendWindSpeedDataToThingsBoard(avgWindSpeed);      // Enviar velocidad promedio del viento a ThingsBoard
+  float* windspeed = WindSensor();
+  sendWS(windspeed);      // Enviar velocidad del viento a ThingsBoard
 
-  // Obtener la temperatura del PT1000
-  float pt1000Temperature = readPT1000Temperature();
-  sendPT1000TemperatureDataToThingsBoard(pt1000Temperature);  // Enviar temperatura radiante a ThingsBoard
-
-  mqttClient.loop();  // Mantiene la conexión MQTT activa
-  delay(2000);  // Espera 2 segundos antes de la siguiente medición
+  mqttClient.loop();
+  delay(2000);  // Espera 2 segundos antes de la siguiente iteración
 }
 
 /**
- * Función para reconectar a la red WiFi.
- * Intenta reconectar si la conexión WiFi se pierde.
+ * Conecta a la red WiFi.
+ */
+void connectWiFi() {
+  WiFi.begin(WIFI_AP, WIFI_PASSWORD);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);  // Espera hasta conectarse
+  }
+}
+
+/**
+ * Reconecta a la red WiFi si es necesario.
  */
 void reconnectWiFi() {
   while (WiFi.status() != WL_CONNECTED) {
     WiFi.begin(WIFI_AP, WIFI_PASSWORD);
-    delay(500);  // Espera y vuelve a intentar
+    delay(500);
   }
 }
 
 /**
- * Función para reconectar a ThingsBoard.
- * Intenta reconectar si la conexión MQTT se pierde.
+ * Reconecta a ThingsBoard si es necesario.
  */
 void reconnectThingsBoard() {
   while (!mqttClient.connected()) {
-    if (connectToThingsBoard()) {
-      delay(5000);  // Espera 5 segundos antes de intentar nuevamente
-    }
+    connectToThingsBoard();
+    delay(5000);  // Espera antes de reintentar
   }
 }
 
 /**
- * Función para conectarse a ThingsBoard.
- * Conexión usando el token de autenticación definido.
+ * Conecta a ThingsBoard usando el token de autenticación.
  */
 bool connectToThingsBoard() {
   return mqttClient.connect("ArduinoClient", TOKEN, NULL);
 }
 
 /**
- * Función para enviar los datos de temperatura a ThingsBoard.
- * Publica los valores de los termopares en los temas MQTT correspondientes.
- *
- * Parámetros:
- * - temperatures: Arreglo con las mediciones de temperatura (TEMP1, TEMP2, TEMP3 y TEMP4).
+ * Envía los datos de temperatura.
  */
-void sendTemperatureDataToThingsBoard(float* temperatures) {
-    String topic = "v1/devices/me/telemetry";
-    String payload = "{\"TEMP1\":" + String(temperatures[0]) + 
-                     ", \"TEMP2\":" + String(temperatures[1]) + 
-                     ", \"TEMP3\":" + String(temperatures[2]) + 
-                     ", \"TEMP4\":" + String(temperatures[3]) + "}";
-    
-    mqttClient.publish(topic.c_str(), payload.c_str());  // Publica los datos de temperatura
+void sendTC(float* temperatures) {
+  String topic = "v1/devices/me/telemetry";
+  String payload = "{\"T1\":" + String(temperatures[0]) + 
+                   ", \"T2\":" + String(temperatures[1]) + 
+                   ", \"T3\":" + String(temperatures[2]) + 
+                   ", \"T4\":" + String(temperatures[3]) + "}";
+  mqttClient.publish(topic.c_str(), payload.c_str());
 }
 
 /**
- * Función para enviar los datos de velocidad promedio del viento a ThingsBoard.
- * Publica el valor de la velocidad promedio del viento en el tema MQTT correspondiente.
- *
- * Parámetros:
- * - avgWindSpeed: Velocidad promedio del viento (en m/s).
+ * Envía los datos de temperatura radiante.
  */
-void sendWindSpeedDataToThingsBoard(float avgWindSpeed) {
+void sendRT(float radiant) {
   String topic = "v1/devices/me/telemetry";
-  String payload = "{\"AVG WS\":" + String(avgWindSpeed) + "}";
-  mqttClient.publish(topic.c_str(), payload.c_str());  // Publica el dato de velocidad promedio del viento
+  String payload = "{\"TR\":" + String(radiant) + "}";
+  mqttClient.publish(topic.c_str(), payload.c_str());  
 }
 
 /**
- * Función para enviar los datos de temperatura del PT1000 a ThingsBoard.
- * Publica el valor de la temperatura PT1000 en el tema MQTT correspondiente.
- *
- * Parámetros:
- * - pt1000Temperature: Temperatura radiante (en grados Celsius).
+ * Envía los datos de velocidad del viento.
  */
-void sendPT1000TemperatureDataToThingsBoard(float pt1000Temperature) {
+void sendWS(float* windspeed) {
   String topic = "v1/devices/me/telemetry";
-  String payload = "{\"TR\":" + String(pt1000Temperature) + "}";
-  mqttClient.publish(topic.c_str(), payload.c_str());  // Publica el dato de temperatura radiante
+  String payload = "{\"WS\":" + String(windspeed[0]) + 
+                   ", \"TEMP\":" + String(windspeed[1]) + "}";
+  mqttClient.publish(topic.c_str(), payload.c_str());
 }
