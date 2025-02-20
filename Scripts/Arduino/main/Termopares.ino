@@ -44,7 +44,7 @@ float* ThermocoupleTemp() {
       // En caso de error, se asigna NaN (Not a Number)
       tc_temps[i] = NAN;
     } else {
-      float raw_temperature = thermocouples[i].getColdJunctionTemperature();
+      float raw_temperature = thermocouples[i].getTemperature();
       tc_temps[i] = m[i] * raw_temperature + b[i];  // Aplica la calibración
     }
   }
