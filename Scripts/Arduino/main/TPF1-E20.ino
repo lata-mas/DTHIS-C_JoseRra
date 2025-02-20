@@ -9,7 +9,7 @@ Adafruit_MAX31865 thermo = Adafruit_MAX31865(10, 11, 12, 13);
 #define RNOMINAL  1000.0  // Resistencia nominal a 0°C (100.0 para PT100, 1000.0 para PT1000)
 
 // Función que realiza la medición y retorna la temperatura radiante en grados Celsius.
-float RadiantTemp() {
+float TPF1Temp() {
   // Inicializa el sensor solo la primera vez que se llama a la función.
   static bool initialized = false;
   if (!initialized) {
@@ -25,7 +25,7 @@ float RadiantTemp() {
   float resistance = RREF * ratio;
   
   // Calcula la temperatura utilizando el método de la librería
-  float radiant = thermo.temperature(RNOMINAL, RREF);
+  float radiant_temp = thermo.temperature(RNOMINAL, RREF);
   
-  return radiant;
+  return radiant_temp;
 }
