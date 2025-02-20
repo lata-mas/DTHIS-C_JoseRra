@@ -12,10 +12,10 @@ def thingsboard_data():
     utilizando el protocolo MQTT.
     """
     # Identificador único del dispositivo en ThingsBoard
-    unique_id = '7b239940-6f1d-11ef-b3cc-4fb2ff6d45a9'
+    unique_id = '439b5880-ef49-11ef-a764-89511d992d0f'
 
     # Token de autenticación para acceder a la plataforma ThingsBoard
-    token = '1OEilpG3goyYcWLZvuz0'
+    token = 'bXQq1eepFYJV3nldvLTV'
 
     # Dirección del servidor ThingsBoard
     thingsboard_host = 'tb.ier.unam.mx'
