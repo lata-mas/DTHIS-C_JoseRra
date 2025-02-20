@@ -8,22 +8,22 @@ def scd30_measurements():
     Función para obtener las lecturas de CO2, Temperatura y Humedad Relativa del sensor SCD30.
 
     Retorna:
-        tuple: (CO2, T, HR) donde
-            CO2: concentración de CO2 en ppm
-            T: temperatura en grados Celsius
-            HR: humedad relativa en porcentaje
+        dict: {'CO2': concentración de CO2 en ppm,
+                'T': temperatura en grados Celsius, 
+                'HR': humedad relativa en porcentaje}
     """
     # Inicializa el sensor SCD30
     scd30 = SCD30()
     # Espera para asegurarse de que el sensor esté listo
-    time.sleep(2)  
+    time.sleep(2)
     
     # Verifica si los datos están listos para ser leídos
     if scd30.get_data_ready():
         # Lee las mediciones del sensor
         CO2, T, HR = scd30.read_measurement()
-        # Redondea cada valor a dos decimales
-        CO2 = round(CO2, 2)
-        T = round(T, 2)
-        HR = round(HR, 2)
-        return CO2, T, HR
+        # Retorna las lecturas redondeadas a dos decimales en un diccionario
+        return {
+            'CO2': round(CO2, 2),
+            'Temperatura': round(T, 2),
+            'Humedad Relativa': round(HR, 2)
+        }
