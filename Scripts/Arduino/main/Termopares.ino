@@ -12,7 +12,7 @@ const float b[NUM_THERMOCOUPLES] = {-2.4327, -2.8632, -4.4316, -3.9348};  // Int
 MAX31856 thermocouples[NUM_THERMOCOUPLES];
 
 float* ThermocoupleTemp() {
-  static float temperatures[NUM_THERMOCOUPLES];
+  static float tc_temps[NUM_THERMOCOUPLES];
   static bool initialized = false;
 
   // Inicializa los sensores solo la primera vez que se llama a la función
@@ -42,12 +42,12 @@ float* ThermocoupleTemp() {
   for (int i = 0; i < NUM_THERMOCOUPLES; i++) {
     if (thermocouples[i].getStatus() != 0) {
       // En caso de error, se asigna NaN (Not a Number)
-      temperatures[i] = NAN;
+      tc_temps[i] = NAN;
     } else {
       float raw_temperature = thermocouples[i].getColdJunctionTemperature();
-      temperatures[i] = m[i] * raw_temperature + b[i];  // Aplica la calibración
+      tc_temps[i] = m[i] * raw_temperature + b[i];  // Aplica la calibración
     }
   }
   
-  return temperatures;
+  return tc_temps;
 }
