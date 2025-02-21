@@ -7,18 +7,23 @@ def sound_data():
     Retorna:
         dict: Datos de sonido en dB (RMS_dB, dBmax_dB, dBmin_dB).
     """
-    archivos = ['/home/hdeza/Sonido/rms.txt', '/home/hdeza/Sonido/dBmax.txt', '/home/hdeza/Sonido/dBmin.txt']
+    archivos = [
+        '/home/dthisc/dthis-c/sound/rms.txt',
+        '/home/dthisc/dthis-c/sound/dBmax.txt',
+        '/home/dthisc/dthis-c/sound/dBmin.txt'
+    ]
+    
     rms_x = ""
     dBmax_x = ""
     dBmin_x = ""
 
     for archivo in archivos:
         with open(archivo, 'r', encoding='utf-8') as f:
-            if archivo == '/home/hdeza/Sonido/rms.txt':
+            if archivo == '/home/dthisc/dthis-c/sound/rms.txt':
                 rms_x = round(float(f.read().strip()), 4)
-            elif archivo == '/home/hdeza/Sonido/dBmax.txt':
+            elif archivo == '/home/dthisc/dthis-c/sound/dBmax.txt':
                 dBmax_x = round(float(f.read().strip()), 4)
-            elif archivo == '/home/hdeza/Sonido/dBmin.txt':
+            elif archivo == '/home/dthisc/dthis-c/sound/dBmin.txt':
                 dBmin_x = round(float(f.read().strip()), 4)
 
     rms_db = round(20 * np.log10(float(rms_x)) + 120, 4)
