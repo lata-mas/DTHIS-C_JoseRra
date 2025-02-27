@@ -25,7 +25,10 @@ float TPF1Temp() {
   float resistance = RREF * ratio;
   
   // Calcula la temperatura utilizando el método de la librería
-  float radiant_temp = thermo.temperature(RNOMINAL, RREF);
+  float raw_temp = thermo.temperature(RNOMINAL, RREF);
+
+  // Aplica la ecuación de calibración: 1.0582 * temp + (-1.5553)
+  float radiant_temp = 1.0582 * raw_temp - 1.5553;
   
   return radiant_temp;
 }
