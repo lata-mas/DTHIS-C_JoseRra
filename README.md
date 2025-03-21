@@ -1,5 +1,9 @@
 # DTHIS-C
 
+Este dispositivo se realizó gracias al apoyo del proyecto UNAM-PAPIIT IT103023.
+
+
+
 El **DTHIS-C** (Dispositivo de Temperatura, Humedad, Iluminación y Sonido de Campaña) está diseñado para medir y evaluar condiciones ambientales tanto en interiores como en exteriores. Su principal ventaja es su portabilidad y su capacidad para adquirir datos sin necesidad de una red WiFi, haciéndolo ideal para campañas en sitios remotos o situaciones que requieren movilidad.
 
 ## Variables que mide el DTHIS-C
