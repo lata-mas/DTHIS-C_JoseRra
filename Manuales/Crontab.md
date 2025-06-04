@@ -50,8 +50,8 @@ En el editor que se abra (normalmente nano o vim), pega las siguientes líneas a
 */30 * * * * /bin/bash -c 'source /home/dthisc/venvs/dthisc/bin/activate && /home/dthisc/venvs/dthisc/bin/python3 /home/dthisc/dthis-c/iluminancia.py' >> /home/dthisc/dthis-c/iluminancia.log 2>&1
 ```
 
-Se usa >> `archivo.log 2>&1` para redirigir tanto la salida estándar como los errores a un archivo de log.
+- Se usa >> `archivo.log 2>&1` para redirigir tanto la salida estándar como los errores a un archivo de log.
 
-En los comandos Python, se activa primero el entorno virtual (`venvs/dthisc`) para asegurar que se usen las dependencias correctas.
+- En los comandos Python, se activa primero el entorno virtual (`venvs/dthisc`) para asegurar que se usen las dependencias correctas.
 
 Guarda el archivo y cierra el editor (en `nano`: `Ctrl+O`, `Enter`, `Ctrl+X`; en `vim`: `:wq`).
