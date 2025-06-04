@@ -1,5 +1,8 @@
 #!/bin/bash
 
-maximo="/home/hdeza/Sonido/dBmax.txt"
+AUDIO="/home/dthisc/dthis-c/sound/audio.wav"
+MAXIMO="/home/dthisc/dthis-c/sound/dBmax.txt"
 
-/usr/bin/sox /home/hdeza/Sonido/audio.wav -n stat 2>&1 | /usr/bin/grep "Maximum amplitude:" | /usr/bin/awk '{print $3}'  > $maximo
+/usr/bin/sox "$AUDIO" -n stat 2>&1 \
+  | awk '/Maximum.*amplitude/ {print $3}' \
+  > "$MAXIMO"

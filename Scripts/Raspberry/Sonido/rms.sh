@@ -1,5 +1,8 @@
 #!/bin/bash
 
-media="/home/hdeza/Sonido/rms.txt"
+AUDIO="/home/dthisc/dthis-c/sound/audio.wav"
+MEDIA="/home/dthisc/dthis-c/sound/rms.txt"
 
-/usr/bin/sox /home/hdeza/Sonido/audio.wav -n stat 2>&1 | /usr/bin/grep "RMS     amplitude:" | /usr/bin/awk '{print $3}' > $media
+/usr/bin/sox "$AUDIO" -n stat 2>&1 \
+  | awk '/RMS.*amplitude/ {print $3}' \
+  > "$MEDIA"

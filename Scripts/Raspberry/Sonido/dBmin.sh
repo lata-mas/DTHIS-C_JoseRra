@@ -1,5 +1,8 @@
 #!/bin/bash
 
-minimo="/home/hdeza/Sonido/dBmin.txt"
+AUDIO="/home/dthisc/dthis-c/sound/audio.wav"
+MINIMO="/home/dthisc/dthis-c/sound/dBmin.txt"
 
-/usr/bin/sox /home/hdeza/Sonido/audio.wav -n stat 2>&1 | /usr/bin/grep "Minimum amplitude:" | /usr/bin/awk '{print $3}' > $minimo
+/usr/bin/sox "$AUDIO" -n stat 2>&1 \
+  | awk '/Minimum.*amplitude/ {print $3}' \
+  > "$MINIMO"
